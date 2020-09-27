@@ -1,0 +1,13 @@
+.blogs-section {
+    .blog-widget {
+        margin-bottom: 30px;
+        color: $second-color;
+        .widget-content {
+            padding: 10px;
+            h6,
+            span {
+                font-size: $sm-font-size;
+            }
+        }
+    }
+}

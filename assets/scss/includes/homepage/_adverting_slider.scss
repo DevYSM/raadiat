@@ -1,0 +1,53 @@
+.adverting-slider {
+    .overlay {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        img {
+            max-height: 300px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .carousel-control-prev-icon {
+        background-image: url(/assets/images/icons/arrows/right-circle-arrow.png);
+    }
+    .carousel-control-next-icon {
+        background-image: url(/assets/images/icons/arrows/left-circle-arrow.png);
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        width: 84px;
+        height: 84px;
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 84px;
+    }
+    .carousel-control-prev {
+        right: -40px;
+    }
+    .carousel-control-next {
+        left: -40px;
+    }
+    .carousel-caption {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: revert;
+        padding: 70px;
+    }
+}

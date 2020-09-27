@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $main-font!important;
+    background: $off-white-color;
+    font-size: 14px;
+    // height: 5000px;
+}
+
+a,
+.btn {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+a:hover {
+    color: $second-color;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}

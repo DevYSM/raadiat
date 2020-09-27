@@ -1,0 +1,31 @@
+.my-courses {
+    padding: 14px;
+    h6 {
+        font-size: $sm-font-size;
+    }
+    .teacher-name {
+        font-size: $xs-font-size
+    }
+    .video-thumbnail {
+        position: relative;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+        .photo-radius {
+            border-radius: 3px 3px 0 0;
+        }
+        .play-icon {
+            width: 34px;
+            position: absolute;
+            top: 15%;
+            right: 50%;
+            @include prefixes(transform, translate(50%, 50%));
+        }
+    }
+    .progress {
+        height: 4px;
+        background-color: $second-color;
+        border-radius: 0;
+    }
+}

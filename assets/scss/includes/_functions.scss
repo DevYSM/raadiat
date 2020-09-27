@@ -1,0 +1,41 @@
+/// Mixin to prefix a property
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefixes($property, $value, $prefixes:(webkit ms o moz)) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+}
+
+// Start placeholders 
+%circle {
+    border-radius: 50%;
+}
+
+%flex {
+    display: flex;
+    -ms-display: flex;
+}
+
+%f-center {
+    align-items: center;
+    justify-content: center;
+}
+
+%f-right {
+    align-items: center;
+    justify-content: right;
+}
+
+%transitions {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin f-right {
+    @extend %f-right;
+}

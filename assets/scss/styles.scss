@@ -1,0 +1,16 @@
+@import 'includes/variables';
+@import 'includes/fonts';
+@import 'includes/reset';
+@import 'includes/functions';
+@import 'includes/global';
+@import 'includes/header';
+// Start Homepage Style
+@import 'includes/homepage/adverting_slider';
+@import 'includes/homepage/my_courses';
+@import 'includes/homepage/leading_besinesses';
+@import 'includes/homepage/workshops';
+@import 'includes/homepage/network';
+@import 'includes/homepage/blogs';
+// End Homepage Style
+@import 'includes/footer';
+@import 'includes/responsive';

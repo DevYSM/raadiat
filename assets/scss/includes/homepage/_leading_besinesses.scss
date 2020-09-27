@@ -1,0 +1,38 @@
+.public-leading-businesses-section {
+    .lb-widget {
+        padding-bottom: 5px;
+        position: relative;
+        overflow: hidden;
+        h6 {
+            padding: 10px 10px 0;
+            font-size: $sm-font-size;
+            margin-bottom: 0;
+            color: $second-color;
+        }
+        p {
+            font-size: $xs-font-size;
+            padding: 10px;
+            margin-bottom: 0;
+            color: $third-color;
+        }
+        .status {
+            position: absolute;
+            top: 53%;
+            right: 10px;
+        }
+    }
+}
+
+.private-leading-businesses-section {
+    .lb-widget {
+        min-height: 135px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a {
+        color: $white-color;
+        font-size: $md-font-size;
+    }
+}

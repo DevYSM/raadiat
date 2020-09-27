@@ -1,0 +1,57 @@
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @include prefixes(transition, all 0.3s ease-in-out);
+    &.backdrop {
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.unset-all {
+    all: unset;
+    cursor: pointer;
+}
+
+.title {
+    h2 {
+        font-size: $title-font-size;
+        color: $title-main-color;
+    }
+    p {
+        font-size: $md-font-size;
+        color: $description-main-color;
+    }
+}
+
+.sub-title {
+    margin-bottom: 20px;
+    h2 {
+        font-size: $sub-title-font-size;
+        color: $title-main-color;
+    }
+}
+
+.section {
+    padding-top: 50px;
+}
+
+.white-bg {
+    background: $white-color;
+    border-radius: 3px;
+    @extend %transitions;
+    &:hover {
+        -webkit-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
+        -moz-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
+        box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
+    }
+}
+
+.gradient-bg {
+    background: rgb(51, 194, 187);
+    background: linear-gradient( 90deg, rgba(51, 194, 187, 1) 0%, rgba(35, 232, 199, 1) 100%);
+}

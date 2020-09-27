@@ -1,0 +1,22 @@
+@media (min-width:992px) and (max-width: 1366px) {}
+
+@media (max-width: 992px) {
+    .blogs-section {
+        .filtration {
+            a {
+                margin-bottom: 10px;
+            }
+        }
+        .blog-title {
+            h2 {
+                font-size: $md-font-size;
+            }
+            span {
+                font-size: $xs-font-size;
+            }
+        }
+    }
+}
+
+
+/* End Responsive */

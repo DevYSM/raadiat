@@ -1,0 +1,138 @@
+@media (min-width: 992px) and (max-width: 1366px) {
+    .academy-section {
+        .my-courses {
+            .video-thumbnail {
+                .play-icon {
+                    width: 34px;
+                    top: 15%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    //  .adverting-slider
+    .adverting-slider {
+        .carousel-caption {
+            padding: 50px;
+            h5 {
+                font-size: $sm-font-size;
+            }
+            p {
+                font-size: $xs-font-size;
+            }
+        }
+        .carousel-control-next {
+            left: 0;
+            width: 50px;
+        }
+        .carousel-control-prev {
+            right: 0;
+            width: 50px;
+        }
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    // ./adverting-slider
+    // .academy-section
+    .academy-section {
+        .my-courses {
+            margin-bottom: 30px;
+            h6 {
+                margin-top: 10px;
+            }
+            .video-thumbnail {
+                .play-icon {
+                    width: 34px;
+                    top: 28px;
+                }
+            }
+        }
+    }
+    // /.academy-section
+    // .public-leading-businesses-section
+    .public-leading-businesses-section {
+        .lb-widget {
+            margin-bottom: 30px;
+            .status {
+                top: 10px;
+                right: 10px;
+            }
+        }
+    }
+    // /.public-leading-businesses-section
+    // .private-leading-businesses-section
+    .private-leading-businesses-section {
+        .lb-widget {
+            margin-bottom: 30px;
+            min-height: 100px;
+        }
+    }
+    // /.private-leading-businesses-section
+    // .work-shops-section
+    .work-shops-section {
+        .workshop-widget {
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .banner {
+            img {
+                margin-bottom: 20px;
+                max-width: 70px;
+            }
+        }
+    }
+    // /.work-shops-section
+    // .network-section
+    .network-section {
+        .women-entrepreneurs {
+            margin-bottom: 30px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    // /.network-section
+    // .meetings
+    .meetings {
+        .meeting-widget {
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    // /.meetings
+    // .podcast  
+    .podcast {
+        .podcast-widget {
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+            .play-icon {
+                width: 34px;
+            }
+        }
+    }
+    // /.podcast  
+    // .blogs-section
+    .blogs-section {
+        .blog-widget {
+            margin-bottom: 30px;
+        }
+    }
+    // /.blogs-section
+}
+
+
+/* End Responsive */

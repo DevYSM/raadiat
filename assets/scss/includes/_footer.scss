@@ -1,0 +1,55 @@
+.footer {
+    background: $light-black;
+    margin-top: 60px;
+    padding: 40px 0;
+    h6 {
+        color: $white-color;
+        font-size: $sm-font-size;
+    }
+    a {
+        color: $white-color;
+        font-size: $xs-font-size;
+        margin-bottom: 5px;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    .social-media {
+        margin: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        a {
+            margin-right: 15px;
+        }
+    }
+    .privacy-policy {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        a {
+            margin-bottom: 0;
+        }
+        .v-divider {
+            color: $white-color;
+            margin: 0 15px;
+            position: relative;
+            top: -2px;
+        }
+    }
+    .subscribe {
+        position: relative;
+        overflow: hidden;
+        .form-control {
+            height: 42px;
+            border: none;
+        }
+        button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            img {
+                border-radius: 3px 0px 0 3px;
+            }
+        }
+    }
+}

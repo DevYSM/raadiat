@@ -1,0 +1,47 @@
+.work-shops-section {
+    .workshop-widget {
+        position: relative;
+        overflow: hidden;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: rgb(0 0 0 / 40%);
+        }
+        .absolute {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-right: 10px;
+            h6 {
+                font-size: $sm-font-size;
+                color: $white-color;
+            }
+            p {
+                font-size: $xs-font-size;
+                color: $white-color;
+            }
+        }
+    }
+    .banner {
+        padding: 30px;
+        border-radius: 3px;
+        &.join-ideas-banner {
+            background: $main-color;
+        }
+        &.request-reference-banner {
+            background: #29B26D;
+        }
+        h3 {
+            font-size: $sub-title-font-size;
+            color: $white-color;
+        }
+        p {
+            color: $white-color;
+        }
+    }
+}
