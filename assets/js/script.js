@@ -77,3 +77,8 @@
           $('#backdrop').removeClass('backdrop').addClass('not-has-backdrop')
       })
   })
+
+
+  $(function() {
+      $('audio').audioPlayer();
+  });

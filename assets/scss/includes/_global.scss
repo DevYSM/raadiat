@@ -55,3 +55,38 @@
     background: rgb(51, 194, 187);
     background: linear-gradient( 90deg, rgba(51, 194, 187, 1) 0%, rgba(35, 232, 199, 1) 100%);
 }
+
+.filtration {
+    .btn {
+        border-color: #E7E7E7!important;
+        color: #505050;
+        &.active {
+            border-color: #E2F2F1!important;
+            background-color: #E2F2F1!important;
+            color: $main-color!important;
+        }
+        &:hover {
+            border-color: #E2F2F1!important;
+            background-color: #E2F2F1!important;
+            color: $main-color!important;
+        }
+    }
+}
+
+.play-icon-parent {
+    position: relative;
+    .play-icon {
+        position: absolute;
+        top: 35%;
+        right: 50%;
+        @include prefixes(transform, translate(50%, 50%));
+    }
+}
+
+@media(max-width: 992px) {
+    .filtration {
+        .btn {
+            margin-bottom: 10px;
+        }
+    }
+}

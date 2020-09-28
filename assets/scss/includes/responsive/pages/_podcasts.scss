@@ -1,0 +1,17 @@
+@media (min-width:992px) and (max-width: 1366px) {}
+
+@media (max-width: 992px) {
+    .podcast-photo {
+        img {
+            margin-bottom: 30px;
+        }
+    }
+    .podcast-details {
+        .d-flex {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+/* End Responsive */
