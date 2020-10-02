@@ -82,3 +82,30 @@
   $(function() {
       $('audio').audioPlayer();
   });
+
+
+  //has-cropper
+
+  $(function() {
+      $('.has-counter').each(function() {
+          $(this).next('span').text($(this).val().length + '/' + 220)
+      });
+      $('.has-counter').on('keydown', function() {
+          $(this).next('span').text($(this).val().length + '/' + 220)
+      });
+  })
+
+  $(document).ready(function() {
+
+      if ($('.has-hidden-input').is(':checked') && $(this).val() == 'resident') {
+          $('.residency-number').removeClass('d-none');
+      }
+      $('.has-hidden-input').change(function() {
+          if ($(this).is(':checked') && $(this).val() == 'resident') {
+              $('.residency-number').removeClass('d-none');
+          } else {
+              $('.residency-number').addClass('d-none');
+          }
+
+      });
+  })

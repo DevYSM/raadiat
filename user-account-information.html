@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Include Css Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" href="assets/css/audioplayer.css" />
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" href="assets/css/cropper.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- Application Title -->
+    <title>رياديات</title>
+    <!-- CDN Files-->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/icons/logo.png" alt="رياديات">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            تصفحي الدورات
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-categories" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h6>الأكاديمية العامة <a href="#" class="text-primary">إشتراك</a></h6>
+                                    <a class="dropdown-item" href="#">تسويق</a>
+                                    <a class="dropdown-item" href="#">محاسبة</a>
+                                    <a class="dropdown-item" href="#">إدارة</a>
+                                    <a class="dropdown-item" href="#">مالية</a>
+                                </div>
+                                <div class="col-6">
+                                    <h6>الأكاديمية المتخصصة <a href="#" class="text-primary">إشتراك</a></h6>
+                                    <a class="dropdown-item" href="#">الأزياء</a>
+                                    <a class="dropdown-item" href="#">المجوهرات</a>
+                                    <a class="dropdown-item" href="#">التصميم الداخلي</a>
+                                    <a class="dropdown-item" href="#">التقنية</a>
+                                    <a class="dropdown-item" href="#">التجارة الإلكترونية</a>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <a href="#" class="text-primary">عرض الكل</a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الشبكة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الحاضنة</a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            خدماتنا
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">دورة رقم 1</a>
+                            <a class="dropdown-item" href="#">دورة رقم 2</a>
+                            <a class="dropdown-item" href="#">دورة رقم 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle position-relative" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            انشري تدريبك <span class="badge badge-success position-absolute">جديد</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">دورة رقم 1</a>
+                            <a class="dropdown-item" href="#">دورة رقم 2</a>
+                            <a class="dropdown-item" href="#">دورة رقم 3</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-between flex-wrap flex-column flex-lg-row right-column-of-navbar">
+
+                    <form class="form-inline my-2 my-lg-0 search-form">
+                        <input class="form-control " type="search" placeholder="ابحثي عن  دورات تدريبية, رائدات أعمال" aria-label="Search">
+                        <button class="btn-search" type="submit">
+                            <img src="assets/images/icons/search.png" alt="search-icon">
+                        </button>
+                    </form>
+                    <ul class="navbar-nav mr-sm-4 align-item-center user-actions">
+                        <li class="nav-item notify">
+                            <a class="nav-link" href="#">
+                                <img src="assets/images/icons/header/messages.png" alt="messages">
+                                <span class="notify-count">8</span>
+                            </a>
+
+                        </li>
+                        <li class="nav-item notify">
+                            <a class="nav-link" href="#">
+                                <img src="assets/images/icons/header/notfications.png" alt="notifications">
+                                <span class="notify-count">8</span>
+                            </a>
+                        </li>
+
+                        <li class="dropdown notify">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/icons/header/avatar.png" alt="">
+                            </a>
+                            <ul class="dropdown-menu notify-drop">
+                                <a class="dropdown-item" href="#">دوراتي</a>
+                                <a class="dropdown-item" href="#">الصفحة الشخصية</a>
+                                <a class="dropdown-item" href="#">اعدادات الحساب</a>
+                                <a class="dropdown-item" href="#">كوني مدربة</a>
+                                <a class="dropdown-item" href="#">نشر عرض</a>
+                                <a class="dropdown-item" href="#">تسجيل الخروج</a>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <a href="#" class="btn btn-primary">طوري للمنصة المميزة</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="user-profile user-account-information section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <div class="nav flex-column nav-pills white-bg" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link " href="user-edit-profile.html">تعديل البيانات الشخصية</a>
+                            <a class="nav-link active" href="user-account-information.html">بيانات الحساب</a>
+                            <a class="nav-link" href="user-notifications.html">الإشعارات</a>
+                            <a class="nav-link" href="user-payments.html">بطاقات الدفع</a>
+                            <a class="nav-link" href="user-subscription.html">اشتراكاتي</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <div class="white-bg edit-user-content">
+                            <h2>بيانات الحساب</h2>
+                            <hr class="mt-4">
+                            <div class="row">
+                                <!-- .col-12 -->
+                                <div class="col-12 col-md-6">
+                                    <form class="needs-validation" novalidate>
+                                        <div class="form-group">
+                                            <label for="email">البريد الإلكتروني</label>
+                                            <input type="email" class="form-control" id="email" value="aya@gmail.com" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mt-3">تعديل البريد الإلكتروني </button>
+                                    </form>
+                                </div>
+                                <!-- ./col-12 -->
+
+                                <!-- .col-12 -->
+                                <div class="col-12 col-md-6">
+
+                                    <form class="needs-validation" novalidate>
+                                        <div class="form-group">
+                                            <label for="current_password">رقم المرور الحالي</label>
+                                            <input type="current_password" class="form-control" id="current_password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">رقم المرور الجديد</label>
+                                            <input type="password" class="form-control" id="password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirm_password">رقم المرور الجديد مرة أخرى</label>
+                                            <input type="confirm_password" class="form-control" id="confirm_password" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mt-3">
+                                            حفظ كلمة المرور الجديدة
+                                        </button>
+                                    </form>
+                                </div>
+                                <!-- /.col-12 -->
+                            </div>
+                            <a href="user-delete-account.html" data-toggle="modal" data-target="#exampleModal" class="text-danger">حذف الحساب</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <!-- start col -->
+                <div class="col-12 col-md-12  col-lg-3">
+                    <div class="footer-logo">
+                        <a href="#">
+                            <img src="assets/images/icons/white-logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="social-media" role="group" aria-label="Basic example">
+
+                        <a href="#">
+                            <img src="assets/images/icons/social/linkedin-in.png" alt="linkedin-in">
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/icons/social/instagram.png" alt="instagram">
+                        </a>
+
+                        <a href="#">
+                            <img src="assets/images/icons/social/twitter.png" alt="twitter">
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/icons/social/facebook.png" alt="facebook">
+                        </a>
+                    </div>
+                    <div class="btn-group privacy-policy" role="group" aria-label="Basic example">
+                        <a href="#">
+                            شروط الاستخدام
+                        </a>
+                        <span class="v-divider"> | </span>
+                        <a href="#">
+                            سياسة الخصوصية
+                        </a>
+
+                    </div>
+                </div>
+                <!-- ./col -->
+                <!-- start col -->
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h6>الشركة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">لماذا رياديات</a></li>
+                        <li><a href="#">عن رياديات</a></li>
+                        <li><a href="#">المدونة</a></li>
+                        <li><a href="#">قصص نجاح</a></li>
+                    </ul>
+                </div>
+                <!-- ./col -->
+                <!-- start col -->
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h6>المساعدة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <!-- ./col -->
+                <!-- start col -->
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h6>انضمي إلينا</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">الأكاديمية</a></li>
+                        <li><a href="#">الشبكة</a></li>
+                        <li><a href="#">سجلي كمدربة</a></li>
+                    </ul>
+                </div>
+                <!-- ./col -->
+                <!-- start col -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h6>اشتركي بالقائمة البريدية</h6>
+                    <form class="subscribe">
+                        <div class="form-group">
+                            <input autocomplete="off" type="email" class="form-control " name="email" id="email" placeholder="البريد الإلكتروني">
+                            <button class="unset-all" type="submit">
+                                <img src="assets/images/icons/go.png" alt="search-icon">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- ./col -->
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <div id="backdrop"></div>
+    <!-- Include JS Files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap-rtl.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/audioplayer.js"></script>
+    <script src="assets/js/cropper.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        AOS.init({});
+    </script>
+
+</body>
+
+</html>

@@ -10,4 +10,12 @@
             }
         }
     }
+    .blog-photo {
+        max-height: 400px;
+        overflow: hidden;
+        border-radius: 4px;
+        img {
+            border-radius: 4px;
+        }
+    }
 }

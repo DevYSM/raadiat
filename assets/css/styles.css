@@ -69,6 +69,10 @@ main {
   min-height: 60vh;
 }
 
+.disable-resize {
+  resize: none;
+}
+
 #backdrop {
   position: fixed;
   top: 0;
@@ -120,6 +124,18 @@ main {
   -webkit-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
   -moz-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
   box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
+}
+
+.custom-control {
+  background: #000;
+  color: #FFF;
+  padding: 0.5rem 2.3rem 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.custom-control input,
+.custom-control label {
+  cursor: pointer;
 }
 
 .form-width {
@@ -560,9 +576,12 @@ main {
 }
 .podcast .podcast-widget img {
   width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
 .podcast .podcast-widget .play-icon {
   width: 34px;
+  height: auto;
   position: absolute;
   top: 25%;
   right: 50%;
@@ -592,6 +611,37 @@ main {
 .blogs-section .blog-widget .widget-content h6,
 .blogs-section .blog-widget .widget-content span {
   font-size: 14px;
+}
+.blogs-section .blog-photo {
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.blogs-section .blog-photo img {
+  border-radius: 4px;
+}
+
+.user-profile .nav-pills {
+  padding: 10px 0;
+}
+.user-profile .nav-pills .nav-link {
+  color: #424143;
+  border-bottom: 1px solid #F3F3F3;
+  border-radius: 0;
+}
+.user-profile .nav-pills .nav-link:last-child {
+  border-bottom: none;
+}
+.user-profile .nav-pills .nav-link.active,
+.user-profile .nav-pills .show > .nav-link {
+  color: #1DBDB7;
+  background: transparent;
+}
+.user-profile .edit-user-content {
+  padding: 20px;
+}
+.user-profile .edit-user-content hr {
+  margin: 15px -20px;
 }
 
 .footer {
@@ -901,6 +951,21 @@ main {
 
   .podcast-details .d-flex {
     margin-bottom: 10px;
+  }
+}
+/* End Responsive */
+@media (max-width: 992px) {
+  .user-profile .nav-pills {
+    margin-bottom: 30px;
+  }
+  .user-profile .birthday .custom-select {
+    margin-bottom: 15px;
+  }
+  .user-profile .birthday .col-12:last-child .custom-select {
+    margin-bottom: 0;
+  }
+  .user-profile .custom-control {
+    margin-left: 0.5rem;
   }
 }
 /* End Responsive */

@@ -1,0 +1,27 @@
+@media (min-width:992px) and (max-width: 1366px) {}
+
+@media (max-width: 992px) {
+    .user-profile {
+        .nav-pills {
+            margin-bottom: 30px;
+        }
+        .birthday {
+            .custom-select {
+                margin-bottom: 15px;
+            }
+            .col-12 {
+                &:last-child {
+                    .custom-select {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .custom-control {
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+
+/* End Responsive */

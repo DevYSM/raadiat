@@ -1,0 +1,24 @@
+.user-profile {
+    .nav-pills {
+        padding: 10px 0;
+        .nav-link {
+            color: $second-color;
+            border-bottom: 1px solid #F3F3F3;
+            border-radius: 0;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .nav-link.active,
+        .show>.nav-link {
+            color: $main-color;
+            background: $transparent;
+        }
+    }
+    .edit-user-content {
+        padding: 20px;
+        hr {
+            margin: 15px -20px;
+        }
+    }
+}
