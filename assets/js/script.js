@@ -97,15 +97,30 @@
 
   $(document).ready(function() {
 
-      if ($('.has-hidden-input').is(':checked') && $(this).val() == 'resident') {
-          $('.residency-number').removeClass('d-none');
-      }
-      $('.has-hidden-input').change(function() {
-          if ($(this).is(':checked') && $(this).val() == 'resident') {
-              $('.residency-number').removeClass('d-none');
-          } else {
-              $('.residency-number').addClass('d-none');
-          }
-
+      // Profile photo open file input
+      $('.profile-photo').click(function() {
+          $('#profile-photo').click();
       });
+
+      // User Edit Profile Showing The Hidden input
+      if ($('.type-of-accommodation input[type="radio"].has-hidden-input').is(':checked')) {
+          $('.user-edit-profile .residency-number').removeClass('d-none');
+      }
+
+      $('.type-of-accommodation input[type="radio"]').change(function() {
+          if ($(this).is(':checked') && $(this).hasClass('has-hidden-input')) {
+              $('.user-edit-profile .residency-number').removeClass('d-none');
+          } else {
+              $('.user-edit-profile .residency-number').addClass('d-none');
+          }
+      });
+
+      $('.user-delete-account input[type="radio"]').change(function() {
+          if ($(this).is(':checked') && $(this).hasClass('has-hidden-input')) {
+              $('.user-delete-account .reason-delete-input').removeClass('d-none');
+          } else {
+              $('.user-delete-account .reason-delete-input').addClass('d-none');
+          }
+      });
+
   })

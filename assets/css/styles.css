@@ -138,6 +138,11 @@ main {
   cursor: pointer;
 }
 
+input[type=radio],
+.form-check label {
+  cursor: pointer;
+}
+
 .form-width {
   max-width: 600px;
   margin: 25px auto 0;
@@ -621,6 +626,12 @@ main {
   border-radius: 4px;
 }
 
+.user-profile .profile-photo {
+  height: 121px;
+  width: 121px;
+  object-fit: cover;
+  cursor: pointer;
+}
 .user-profile .nav-pills {
   padding: 10px 0;
 }

@@ -71,6 +71,11 @@ main {
     }
 }
 
+input[type="radio"],
+.form-check label {
+    cursor: pointer;
+}
+
 .form-width {
     max-width: 600px;
     margin: 25px auto 0;

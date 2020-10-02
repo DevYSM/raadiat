@@ -1,4 +1,10 @@
 .user-profile {
+    .profile-photo {
+        height: 121px;
+        width: 121px;
+        object-fit: cover;
+        cursor: pointer;
+    }
     .nav-pills {
         padding: 10px 0;
         .nav-link {
@@ -22,3 +28,6 @@
         }
     }
 }
+
+// Delete Account
+.user-delete-account {}

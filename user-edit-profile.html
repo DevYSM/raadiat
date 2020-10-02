@@ -146,7 +146,8 @@
                     <div class="col-12 col-md-9">
                         <div class="white-bg edit-user-content">
                             <div class="d-flex align-items-center">
-                                <img class="has-cropper rounded-circle" src="assets/images/user-profile/profile.png" alt="dummy">
+                                <img class="rounded-circle profile-photo" src="assets/images/user-profile/profile.png" alt="dummy">
+                                <input id="profile-photo" type="file" name="photo" class="d-none">
                                 <a href="#" class="text-primary mr-3">تغيير صورتك الشخصية</a>
                             </div>
                             <hr class="mt-4">
@@ -386,10 +387,10 @@
                                     <!-- ./experiences -->
 
                                     <!-- type-of-accommodation -->
-                                    <div class="col-12 col-md-6 mt-4">
+                                    <div class="col-12 col-md-6 mt-4 type-of-accommodation">
                                         <label class="ml-3">نوع الإقامة</label>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input checked type="radio" id="saudi" name="type-of-accommodation" class="custom-control-input has-hidden-input" value="saudi">
+                                            <input checked type="radio" id="saudi" name="type-of-accommodation" class="custom-control-input" value="saudi">
                                             <label class="custom-control-label" for="saudi">سعودية</label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
