@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --main-color: #1DBDB7;
   --light-main-color: #E8F8F7;
@@ -57,7 +58,7 @@ img {
   -ms-display: flex;
 }
 
-.white-bg {
+.main-trainer-step .step-box img, .white-bg {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -126,16 +127,37 @@ main {
   box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
 }
 
-.custom-control {
+.custom-radio {
   background: #000;
   color: #FFF;
   padding: 0.5rem 2.3rem 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
 }
-.custom-control input,
-.custom-control label {
+.custom-radio input,
+.custom-radio label {
   cursor: pointer;
+}
+
+.custom-file-input:lang(en) ~ .custom-file-label::after {
+  content: "رفع الملف";
+}
+
+.custom-file .custom-file-input {
+  max-width: 120px;
+}
+.custom-file .custom-file-label {
+  max-width: 120px;
+  cursor: pointer;
+  border: 1px solid #1DBDB7;
+}
+.custom-file .custom-file-label::after {
+  right: 0;
+  text-align: center;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  color: #1DBDB7;
 }
 
 input[type=radio],
@@ -653,6 +675,29 @@ input[type=radio],
 }
 .user-profile .edit-user-content hr {
   margin: 15px -20px;
+}
+
+.main-trainer-step .step-box {
+  background: #F3F3F3;
+  display: block;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.main-trainer-step .step-box:hover {
+  border-color: #1DBDB7;
+}
+.main-trainer-step .step-box img {
+  margin-bottom: 15px;
+}
+.main-trainer-step .step-box p,
+.main-trainer-step .step-box h5 {
+  margin-bottom: 0;
+  color: #424143;
 }
 
 .footer {

@@ -1,0 +1,33 @@
+.main-trainer-step {
+    .step-box {
+        background: #F3F3F3;
+        display: block;
+        min-height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        &:hover {
+            border-color: $main-color;
+            p {
+                // color: $main-color;
+            }
+            img {
+                // filter: invert(64%) sepia(15%) saturate(1984%) hue-rotate(129deg) brightness(91%) contrast(93%);
+            }
+        }
+        img {
+            margin-bottom: 15px;
+            @extend %transitions
+        }
+        p,
+        h5 {
+            margin-bottom: 0;
+            color: $second-color;
+        }
+    }
+}
+
+.trainer-step-1 {}

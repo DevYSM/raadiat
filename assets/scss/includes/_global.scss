@@ -59,7 +59,7 @@ main {
     }
 }
 
-.custom-control {
+.custom-radio {
     background: #000;
     color: #FFF;
     padding: 0.5rem 2.3rem 0.5rem 1rem;
@@ -68,6 +68,29 @@ main {
     input,
     label {
         cursor: pointer;
+    }
+}
+
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: 'رفع الملف'
+}
+
+.custom-file {
+    .custom-file-input {
+        max-width: 120px;
+    }
+    .custom-file-label {
+        max-width: 120px;
+        cursor: pointer;
+        border: 1px solid $main-color;
+        &::after {
+            right: 0;
+            text-align: center;
+            background: $transparent;
+            cursor: pointer;
+            border: none;
+            color: $main-color;
+        }
     }
 }
 

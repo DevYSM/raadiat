@@ -134,6 +134,32 @@
         <div class="user-profile user-edit-profile section">
             <div class="container">
                 <div class="row">
+                    <!-- <div class="col-12">
+                        <div class="alert alert-primary" role="alert">
+                            تنبيه أساسي بسيط - تحقق من ذلك!
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            تنبيه أساسي بسيط - تحقق من ذلك!
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            تنبيه أساسي بسيط - تحقق من ذلك!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            تنبيه أساسي بسيط - تحقق من ذلك!
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            تنبيه أساسي بسيط - تحقق من ذلك!
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            تنبيه أساسي بسيط - تحقق من ذلك!
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            تنبيه أساسي بسيط - تحقق من ذلك!
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            تنبيه أساسي بسيط - تحقق من ذلك!
+                        </div>
+                    </div> -->
                     <div class="col-12 col-md-3">
                         <div class="nav flex-column nav-pills white-bg" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             <a class="nav-link active" href="user-edit-profile.html">تعديل البيانات الشخصية</a>
@@ -148,7 +174,7 @@
                             <div class="d-flex align-items-center">
                                 <img class="rounded-circle profile-photo" src="assets/images/user-profile/profile.png" alt="dummy">
                                 <input id="profile-photo" type="file" name="photo" class="d-none">
-                                <a href="#" class="text-primary mr-3">تغيير صورتك الشخصية</a>
+                                <a href="#" class="upload-photo-btn text-primary mr-3">تغيير صورتك الشخصية</a>
                             </div>
                             <hr class="mt-4">
                             <form>
@@ -179,7 +205,10 @@
                                 <!-- social media -->
                                 <div class="row">
                                     <div class="col-12">
-                                        <h5>مواقع التواصل الاجتماعى</h5>
+                                        <h5>مواقع التواصل الاجتماعى </h5>
+                                        <span class="text-danger d-block mb-3">
+                                            (للتعديل على اى حقل من حقول التواصل الاجتماعى يجب الضغط عليه مراتين)
+                                        </span>
                                     </div>
                                     <!-- .col-md-6 -->
                                     <div class="col-12 col-md-6">
@@ -190,7 +219,7 @@
                                                     <span class="input-group-text" id="basic-addon1"><i
                                                             class="fab fa-facebook"></i></span>
                                                 </div>
-                                                <input type="text" class="form-control" aria-label="social" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control dblclick-event" aria-label="social" aria-describedby="basic-addon1" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -204,7 +233,7 @@
                                                     <span class="input-group-text" id="basic-addon1"><i
                                                             class="fab fa-twitter"></i></span>
                                                 </div>
-                                                <input type="text" class="form-control" aria-label="social" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control dblclick-event" aria-label="social" aria-describedby="basic-addon1" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -218,7 +247,7 @@
                                                     <span class="input-group-text" id="basic-addon1"><i
                                                             class="fab fa-instagram"></i></span>
                                                 </div>
-                                                <input type="text" class="form-control" aria-label="social" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control dblclick-event" aria-label="social" aria-describedby="basic-addon1" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -232,7 +261,7 @@
                                                     <span class="input-group-text" id="basic-addon1"><i
                                                             class="fab fa-linkedin"></i></span>
                                                 </div>
-                                                <input type="text" class="form-control" aria-label="social" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control dblclick-event" aria-label="social" aria-describedby="basic-addon1" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -246,7 +275,7 @@
                                                     <span class="input-group-text" id="basic-addon1"><i
                                                             class="fas fa-globe"></i></span>
                                                 </div>
-                                                <input type="text" class="form-control" aria-label="social" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control dblclick-event" aria-label="social" aria-describedby="basic-addon1" disabled>
                                             </div>
                                         </div>
                                     </div>
@@ -411,6 +440,69 @@
 
                                 </div>
                                 <!-- ./Perosnal information -->
+
+                                <hr class="mt-3">
+                                <div class="row">
+                                    <!-- .col-12 -->
+                                    <div class="col-12">
+                                        <div class=" d-flex align-items-center flex-wrap mb-4">
+                                            <h5 class="mb-0 ml-3">البيانات الشخصية</h5>
+                                            <span> (لن تعرض في صحفتك الشخصية العامة)</span>
+                                        </div>
+                                    </div>
+                                    <!-- ./col-12 -->
+
+                                    <!-- .file -->
+                                    <div class="col-12 col-md-12">
+                                        <label> السيرة الذاتية (بحد أقصى 10 ميجا)</label>
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="uplaod-cv" aria-describedby="uplaod-cv">
+                                                <label class="custom-file-label" for="uplaod-cv"></label>
+                                                <span class="mr-3">(PDF,Docx)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ./file -->
+                                    <!-- .file -->
+                                    <div class="col-12 col-md-12">
+                                        <label> وثيقة التخرج (بحد أقصى 10 ميجا)</label>
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="graduation-document" aria-describedby="graduation-document">
+                                                <label class="custom-file-label" for="graduation-document"></label>
+                                                <span class="mr-3">(PDF,PNG,JPEG)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ./file -->
+                                    <!-- .file -->
+                                    <div class="col-12 col-md-12">
+                                        <label> شهادة الخبرة (بحد أقصى 10 ميجا)</label>
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="experinces-document" aria-describedby="experinces-document">
+                                                <label class="custom-file-label" for="experinces-document"></label>
+                                                <span class="mr-3">(PDF,PNG,JPEG)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ./file -->
+                                    <!-- .file -->
+                                    <div class="col-12 col-md-12">
+                                        <label> شهادة TOT (بحد أقصى 10 ميجا)</label>
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="uplaod-cv" aria-describedby="uplaod-cv">
+                                                <label class="custom-file-label" for="uplaod-cv"></label>
+                                                <span class="mr-3">(PDF,Docx)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ./file -->
+
+
+                                </div>
                                 <button class="btn btn-primary mt-3">حفظ التعديلات</button>
 
                             </form>

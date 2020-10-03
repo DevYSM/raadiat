@@ -97,8 +97,14 @@
 
   $(document).ready(function() {
 
+      // trigger toggle disable event
+      $(document).on('dblclick', '.dblclick-event', function() {
+          console.log('clicked')
+          $(this).prop('disabled', '')
+      })
+
       // Profile photo open file input
-      $('.profile-photo').click(function() {
+      $('.profile-photo, .upload-photo-btn').click(function() {
           $('#profile-photo').click();
       });
 
