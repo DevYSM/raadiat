@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/audioplayer.css" />
     <link rel="stylesheet" href="assets/css/all.css" />
     <link rel="stylesheet" href="assets/css/cropper.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.steps.css" />
     <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -131,24 +132,122 @@
         </nav>
     </header>
     <main>
+
+
         <div class="trainer-steps trainer-step-1 section">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-9 ">
-                        <div class="white-bg p-4">
-                            <h5 class="mb-4"> عن الدورة</h5>
-                            <!-- .row -->
 
-                            <!-- .col-12 -->
-                            <div class="">
-                                <div class="d-flex align-items-center course-photo">
-                                    <img class="rounded-circle profile-photo" src="assets/images/user-profile/profile.png" alt="dummy">
-                                    <input id="profile-photo" type="file" name="photo" class="d-none">
+
+                        <form class="needs-validation" novalidate id="meeting-form" action="#">
+                            <div class="white-bg wizard ">
+
+                                <!-- .row -->
+                                <h1 class="h5">عن الورشة</h1>
+                                <div>
+                                    <!-- .col-12 -->
+                                    <div class="upload-course-photo mb-3">
+                                        <div class="d-flex align-items-center course-photo">
+                                            <img class="  profile-photo" src="assets/images/trainers/workshop.png" alt="dummy">
+                                            <input id="profile-photo" type="file" name="photo" class="d-none ">
+                                        </div>
+                                    </div>
+                                    <!-- ./col-12 -->
+                                    <div class="form-group">
+                                        <label for="address">العنوان</label>
+                                        <input type="text" class="form-control required" id="address" aria-describedby="address" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="about-course"> عن الورشة</label>
+                                        <textarea maxlength="400" class="form-control disable-resize has-counter" id="about-course" rows="4"></textarea>
+                                        <span class="length-counter mt-2 d-block"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="about-course" class="ml-3">الأكاديمية</label>
+                                        <div class="custom-control custom-radio custom-control-inline  ">
+                                            <input data-text="مثال (البرمجة- التصميم)" type="radio" id="type" name="specialization" class="custom-control-input has-data-text">
+                                            <label class="custom-control-label" for="type">أكاديمية عامة</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input data-text="مثال (أزياء، مجواهرات، تصميم داخلي)" checked type="radio" id="customRadioInline2" name="specialization" class="custom-control-input has-data-text">
+                                            <label class="custom-control-label" for="customRadioInline2">أكاديمية
+                                            متخصصة</label>
+                                        </div>
+                                        <span id="data-text" class="mt-2"></span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="about-course">التخصص</label>
+                                                <select class="custom-select">
+                                                <option selected>التخصص</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="workshop-time-from">موعد الورشة من </label>
+                                                <input type="datetime-local" class="form-control " name="meeting_type" id="workshop-time-from">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="workshop-time-to">موعد الورشة إلى</label>
+                                                <input type="datetime-local" class="form-control " name="meeting_type" id="workshop-time-to">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- ./col-12 -->
 
-                        </div>
+                                <h1 class="h5">ارفعي محتويات الورشة</h1>
+                                <div>
+                                    <div class="row align-items-center">
+
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="address">عنوان الدرس</label>
+                                                <input type="text" class="form-control required" id="address" aria-describedby="address" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="workshop-time-from">يوم الجلسه / وقت الجلسة</label>
+                                                <input type="datetime-local" class="form-control " name="meeting_type" id="workshop-time-from">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="address">رابط الدعوة او الرابط المباشر لـ Vimo</label>
+                                                <input type="text" class="form-control required" id="address" aria-describedby="address" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-6">
+                                            <p class="mb-0 mt-3">
+                                                <span> رابط الدعوة لجلسة اونلاين مثال </span> <span>(Zoom, Google meet)</span>
+                                            </p>
+                                            <p>
+                                                <span>رابط الورشة المباشر على موقع</span>
+                                                <span><a href="#" class="text-primary">Vimeo</a></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirm-model">
+                                        نشر الورشة
+                                      </button>
+                                    <span class="mr-3">يمكنك إضافة روابط للدروس الجديدة في أي وقت</span>
+                                </div>
+
+
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -162,17 +261,19 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="confirm-model">رسالة تأكيد</h5>
+                    <h5 class="modal-title" id="confirm-model">تهانينا</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <h5>هل انت متأكد من إلغاء إشتراك الشبكة؟</h5>
+                <div class="modal-body text-center">
+                    <img class="mb-3" src="assets/images/icons/success.png" alt="success">
+                    <h5 class="mb-3">تم رفع الورشة بنجاح</h5>
+                    <h6>سيتم مراجعة الورشة ثم نشرها وإخطارك بذلك</h6>
                 </div>
                 <div class="modal-footer justify-content-start ">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">رجوع</button>
-                    <a href="#" type="button" class="btn btn-outline-primary">إلغاء الإشتراك</a>
+                    <a href="#" class="btn btn-primary">عرض صفحة الورشة</a>
+                    <a href="#" type="button" class="btn btn-outline-primary">الانتقال للصفحة الرئيسية</a>
                 </div>
             </div>
         </div>
@@ -270,6 +371,7 @@
     <div id="backdrop"></div>
     <!-- Include JS Files -->
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.steps.min.js"></script>
     <script src="assets/js/bootstrap-rtl.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/audioplayer.js"></script>

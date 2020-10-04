@@ -88,19 +88,26 @@
 
   $(function() {
       $('.has-counter').each(function() {
-          $(this).next('span').text($(this).val().length + '/' + 220)
+          $(this).next('span').text($(this).val().length + '/' + $(this).attr('maxlength'))
       });
       $('.has-counter').on('keydown', function() {
-          $(this).next('span').text($(this).val().length + '/' + 220)
+          $(this).next('span').text($(this).val().length + '/' + $(this).attr('maxlength'))
       });
+
+      // Trigger data text of specializations
+      $('.has-data-text').change(function() {
+          $('#data-text').text($(this).attr('data-text'));
+      });
+      $('#data-text').text($('.has-data-text:checked').attr('data-text'))
+
   })
 
   $(document).ready(function() {
 
       // trigger toggle disable event
       $(document).on('dblclick', '.dblclick-event', function() {
-          console.log('clicked')
-          $(this).prop('disabled', '')
+          $(this).prev().prop('disabled', '');
+          $(this).prop('disabled', '');
       })
 
       // Profile photo open file input
@@ -130,3 +137,17 @@
       });
 
   })
+
+
+  //   Trigger Steps
+  var settings = {
+      labels: {
+          current: "الخطوة الحالية:",
+          pagination: "ترقيم الصفحات",
+          finish: "إنهاء",
+          next: "التالى",
+          previous: "رجوع",
+          loading: "تحميل ..."
+      }
+  };
+  $(".wizard").steps(settings);
