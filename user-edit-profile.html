@@ -172,7 +172,7 @@
                     <div class="col-12 col-md-9">
                         <div class="white-bg edit-user-content">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle profile-photo" src="assets/images/user-profile/profile.png" alt="dummy">
+                                <img class="rounded-circle profile-photo preview" src="assets/images/user-profile/profile.png" alt="dummy">
                                 <input id="profile-photo" type="file" name="photo" class="d-none">
                                 <a href="#" class="upload-photo-btn text-primary mr-3">تغيير صورتك الشخصية</a>
                             </div>
@@ -347,7 +347,7 @@
                                     <!-- phone -->
                                     <div class="col-12 col-md-6">
                                         <div class="form-group">
-                                            <label for="phone">رقم الجوال</label>
+                                            <label for="phone">رقم الجوال <a href="#" class="text-danger" data-toggle="modal" data-target="#confirm-global-modal">تأكيد رقم الجوال</a></label>
                                             <input type="text" class="form-control" id="phone" value="01208984029">
                                         </div>
                                     </div>
@@ -513,6 +513,34 @@
             </div>
         </div>
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirm-global-modal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">تأكيد رقم الجوال</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <form action="" class="needs-validation" novalidate>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">تأكيد رقم الهاتف</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <small id="emailHelp" class="form-text text-muted">لم يصلك؟ <a href="#" class="text-primary">إرسل مرة أخرى</a></small>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">تأكيد</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
     <footer class="footer">
         <div class="container">

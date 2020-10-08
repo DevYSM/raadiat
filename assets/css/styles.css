@@ -91,6 +91,10 @@ main {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.profile-photo {
+  max-width: 100px;
+}
+
 textarea {
   resize: none;
 }
@@ -219,14 +223,13 @@ input[type=radio],
   -moz-transform: translate(50%, 50%);
 }
 
-.progress {
+.circle-progress {
   width: 150px;
   height: 150px;
   background: none;
   position: relative;
 }
-
-.progress::after {
+.circle-progress::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -236,8 +239,7 @@ input[type=radio],
   top: 0;
   left: 0;
 }
-
-.progress > span {
+.circle-progress > span {
   width: 50%;
   height: 100%;
   overflow: hidden;
@@ -245,12 +247,18 @@ input[type=radio],
   top: 0;
   z-index: 1;
 }
-
-.progress .progress-left {
+.circle-progress .progress-left {
   left: 0;
 }
-
-.progress .progress-bar {
+.circle-progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+.circle-progress .progress-bar {
   width: 100%;
   height: 100%;
   background: none;
@@ -259,21 +267,10 @@ input[type=radio],
   position: absolute;
   top: 0;
 }
-
-.progress .progress-left .progress-bar {
-  left: 100%;
-  border-top-right-radius: 80px;
-  border-bottom-right-radius: 80px;
-  border-left: 0;
-  -webkit-transform-origin: center left;
-  transform-origin: center left;
-}
-
-.progress .progress-right {
+.circle-progress .progress-right {
   right: 0;
 }
-
-.progress .progress-right .progress-bar {
+.circle-progress .progress-right .progress-bar {
   left: -100%;
   border-top-left-radius: 80px;
   border-bottom-left-radius: 80px;
@@ -281,8 +278,7 @@ input[type=radio],
   -webkit-transform-origin: center right;
   transform-origin: center right;
 }
-
-.progress .progress-value {
+.circle-progress .progress-value {
   position: absolute;
   top: 0;
   left: 0;
@@ -746,8 +742,9 @@ div.h4 {
 }
 
 .user-profile .profile-photo {
-  height: 121px;
-  width: 121px;
+  height: 121px !important;
+  width: 121px !important;
+  max-width: 100%;
   object-fit: cover;
   cursor: pointer;
 }
@@ -797,11 +794,11 @@ div.h4 {
   color: #424143;
 }
 
-.network-main-banner .progress {
+.network-main-banner .circle-progress {
   height: 40px;
   width: 40px;
 }
-.network-main-banner .progress img {
+.network-main-banner .circle-progress img {
   border-radius: 50%;
   max-width: 31px;
   max-height: 31px;
@@ -1153,6 +1150,15 @@ div.h4 {
   }
   .user-profile .custom-control {
     margin-left: 0.5rem;
+  }
+}
+/* End Responsive */
+@media (max-width: 768px) {
+  .projects-list {
+    text-align: center;
+  }
+  .projects-list img {
+    margin-bottom: 20px;
   }
 }
 /* End Responsive */

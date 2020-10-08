@@ -1,7 +1,8 @@
 .user-profile {
     .profile-photo {
-        height: 121px;
-        width: 121px;
+        height: 121px!important;
+        width: 121px!important;
+        max-width: 100%;
         object-fit: cover;
         cursor: pointer;
     }

@@ -133,7 +133,6 @@
     </header>
     <main>
 
-
         <div class="trainer-steps trainer-step-1 section">
             <div class="container">
                 <div class="row">
@@ -147,26 +146,28 @@
                                 <h1 class="h5">عن اللقاء</h1>
                                 <div>
                                     <!-- .col-12 -->
-                                    <div class="upload-course-photo mb-3">
+                                    <div class="upload-course-photo d-flex align-items-center mb-3">
+                                        <img class="profile-photo ml-3" src="assets/images/icons/dummy-img.png" alt="dummy">
                                         <div class="d-flex align-items-center course-photo">
-                                            <img class="  profile-photo" src="assets/images/trainers/upload-photo.png" alt="dummy">
+                                            <img class="upload-btn" src="assets/images/icons/camera.png" alt="dummy">
+                                            <span class="mr-2 profile-photo"> إضافة لوجو</span>
                                             <input id="profile-photo" type="file" name="photo" class="d-none ">
                                         </div>
                                     </div>
                                     <!-- ./col-12 -->
                                     <div class="form-group">
                                         <label for="address">العنوان</label>
-                                        <input type="text" class="form-control required" id="address" aria-describedby="address" required>
+                                        <input type="text" class="form-control required" id="address" name="address" aria-describedby="address" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="about-course"> عن اللقاء</label>
-                                        <textarea maxlength="400" class="form-control disable-resize has-counter" id="about-course" rows="4"></textarea>
+                                        <label for="about-meeting"> عن اللقاء</label>
+                                        <textarea maxlength="400" class="form-control disable-resize has-counter" id="about-meeting" rows="4" name="about_meeting" required></textarea>
                                         <span class="length-counter mt-2 d-block"></span>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="about-course" class="ml-3">الأكاديمية</label>
+                                        <label for="about-meeting" class="ml-3">الأكاديمية</label>
                                         <div class="custom-control custom-radio custom-control-inline  ">
                                             <input data-text="مثال (البرمجة- التصميم)" type="radio" id="type" name="specialization" class="custom-control-input has-data-text">
                                             <label class="custom-control-label" for="type">أكاديمية عامة</label>
@@ -204,7 +205,7 @@
                                         <div class="col-12 col-md-6">
                                             <div class="form-group">
                                                 <label for="about-course">موعد اللقاء</label>
-                                                <input type="datetime-local" class="form-control " name="meeting_type" id="meeting-type">
+                                                <input type="datetime-local" class="form-control date-input" name="meeting_type" id="meeting-type" required>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
@@ -222,7 +223,7 @@
                                         <div class="col-12 col-md-6">
                                             <div class="form-group">
                                                 <label for="address">رابط الدعوة او الرابط المباشر لـ Vimo</label>
-                                                <input type="text" class="form-control required" id="address" aria-describedby="address" required="">
+                                                <input type="text" class="form-control required" id="url" name="url" aria-describedby="url" required>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
@@ -235,9 +236,9 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirm-model">
+                                    <!-- <button id="trigger-modal" type="button" class="btn btn-primary" disabled data-toggle="modal" data-target="#confirm-model">
                                         نشر اللقاء
-                                      </button>
+                                      </button> -->
                                 </div>
 
 
@@ -366,6 +367,7 @@
     <div id="backdrop"></div>
     <!-- Include JS Files -->
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/jquery.steps.min.js"></script>
     <script src="assets/js/bootstrap-rtl.min.js"></script>
     <script src="assets/js/aos.js"></script>
