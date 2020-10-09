@@ -192,70 +192,80 @@ $(function() {
 
 //   Meeting Form Handler
 $(function() {
-    // $('input[type=datetime-local]').prop('min', new Date().toJSON().slice(0, 19));
+    $('input[type=datetime-local]').prop('min', new Date().toJSON().slice(0, 19));
 
-    // var form = $("#meeting-form");
-    // if (form) {
+    var form = $("#meeting-form");
+    if (form) {
 
-    // }
-    // form.validate({
-    //     errorPlacement: function errorPlacement(error, element) { element.before(error); },
-    //     rules: {
-    //         confirm: {
-    //             equalTo: "#password"
-    //         },
-    //         url: {
-    //             required: true,
-    //             url: true
-    //         }
-    //     }
-    // });
-    // form.children("div").steps({
-    //     headerTag: "h1",
-    //     bodyTag: "div",
-    //     labels: {
-    //         current: "الخطوة الحالية:",
-    //         pagination: "ترقيم الصفحات",
-    //         finish: "إنهاء",
-    //         next: "التالى",
-    //         previous: "رجوع",
-    //         loading: "تحميل ...",
-    //     },
-    //     errorPlacement: function(error, element) {
-    //         error.appendTo(element.parent(".form-group"));
-    //     },
-    //     transitionEffect: "slideLeft",
-    //     onStepChanging: function(event, currentIndex, newIndex) {
-    //         form.validate().settings.ignore = ":disabled,:hidden";
-    //         return form.valid();
-    //     },
-    //     onFinishing: function(event, currentIndex) {
-    //         form.validate().settings.ignore = ":disabled";
-    //         return form.valid();
-    //     },
-    //     onFinished: function(event, currentIndex) {
-    //         $('#confirm-model').modal('show');
-    //     }
-    // });
+    }
+    form.validate({
+        errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        rules: {
+            confirm: {
+                equalTo: "#password"
+            },
+            url: {
+                required: true,
+                url: true
+            }
+        }
+    });
+    form.children("div").steps({
+        headerTag: "h1",
+        bodyTag: "div",
+        labels: {
+            current: "الخطوة الحالية:",
+            pagination: "ترقيم الصفحات",
+            finish: "إنهاء",
+            next: "التالى",
+            previous: "رجوع",
+            loading: "تحميل ...",
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent(".form-group"));
+        },
+        transitionEffect: "slideLeft",
+        onStepChanging: function(event, currentIndex, newIndex) {
+            form.validate().settings.ignore = ":disabled,:hidden";
+            return form.valid();
+        },
+        onFinishing: function(event, currentIndex) {
+            form.validate().settings.ignore = ":disabled";
+            return form.valid();
+        },
+        onFinished: function(event, currentIndex) {
+            $('#confirm-model').modal('show');
+        }
+    });
 
-    // $.extend($.validator.messages, {
-    //     required: "هذا الحقل مطلوب",
-    //     remote: "Please fix this field.",
-    //     email: "Please enter a valid email address.",
-    //     url: "يجب اضافة اللينك بشكل صحيح.",
-    //     date: "Please enter a valid date.",
-    //     dateISO: "Please enter a valid date (ISO).",
-    //     number: "Please enter a valid number.",
-    //     digits: "Please enter only digits.",
-    //     creditcard: "Please enter a valid credit card number.",
-    //     equalTo: "Please enter the same value again.",
-    //     accept: "Please enter a value with a valid extension.",
-    //     maxlength: $.validator.format("Please enter no more than {0} characters."),
-    //     minlength: $.validator.format("Please enter at least {0} characters."),
-    //     rangelength: $.validator.format("Please enter a value between {0} and {1} characters long."),
-    //     range: $.validator.format("Please enter a value between {0} and {1}."),
-    //     max: $.validator.format("Please enter a value less than or equal to {0}."),
-    //     min: $.validator.format("Please enter a value greater than or equal to {0}.")
-    // });
+    $.extend($.validator.messages, {
+        required: "هذا الحقل مطلوب",
+        remote: "Please fix this field.",
+        email: "Please enter a valid email address.",
+        url: "يجب اضافة اللينك بشكل صحيح.",
+        date: "Please enter a valid date.",
+        dateISO: "Please enter a valid date (ISO).",
+        number: "Please enter a valid number.",
+        digits: "Please enter only digits.",
+        creditcard: "Please enter a valid credit card number.",
+        equalTo: "Please enter the same value again.",
+        accept: "Please enter a value with a valid extension.",
+        maxlength: $.validator.format("Please enter no more than {0} characters."),
+        minlength: $.validator.format("Please enter at least {0} characters."),
+        rangelength: $.validator.format("Please enter a value between {0} and {1} characters long."),
+        range: $.validator.format("Please enter a value between {0} and {1}."),
+        max: $.validator.format("Please enter a value less than or equal to {0}."),
+        min: $.validator.format("Please enter a value greater than or equal to {0}.")
+    });
+
+
+    $(".phone").intlTelInput({
+        allowDropdown: true,
+        autoHideDialCode: true,
+        formatOnDisplay: true,
+        separateDialCode: true,
+    });
+
+    $('.select2').select2()
 
 });

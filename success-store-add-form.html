@@ -23,8 +23,6 @@
 </head>
 
 <body>
-
-
     <header>
         <nav class="navbar navbar-expand-lg navbar-light ">
             <a class="navbar-brand" href="#">
@@ -139,12 +137,12 @@
 
     <main>
         <!-- start login -->
-        <section class="offers offers-form section">
+        <section class="success success-add-form section">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-9">
                         <div class=" white-bg p-4">
-                            <h5 class="mb-4">اضافة مدونة</h5>
+                            <h5 class="mb-4">قصة نجاحك</h5>
                             <!-- .col-12 -->
                             <div class="upload-course-photo d-flex align-items-center mb-3">
                                 <img class="profile-photo ml-3 preview" src="assets/images/icons/dummy-img.png" alt="dummy">
@@ -155,36 +153,40 @@
                                 </div>
                             </div>
                             <form class="needs-validation" novalidate>
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="form-group">
-                                            <label for="company-name">
-                                             عنوان المدونة
-                                            </label>
-                                            <input type="text" class="form-control" id="company-name" aria-describedby="company-name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label for="company-name">
-                                            الأقسام
-                                           </label>
-                                        <select class="form-control select2" multiple="multiple">
-                                            <option selected="">اليوم</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </div>
-                                </div>
+
                                 <div class="form-group">
                                     <label for="about-offer">
-                                        محتوى المدونة
+                                        اكتبي قصتك هنا
                                     </label>
                                     <textarea type="text" rows="5" class="form-control" id="about-offer" aria-describedby="about-offer" required></textarea>
                                 </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="confirm-global-modal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="confirmModalLabel">
+                                                    رسالة تأكيد
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body text-center ">
+                                                <img class="mb-3" src="assets/images/icons/success.png" alt="success">
+                                                <h6>تم الارسال</h6>
+                                                <p>سيتم مراجعة القصة ثم نشرها وإخطارك بذلك</p>
+                                            </div>
+                                            <div class="modal-footer justify-content-between">
+                                                <button type="submit" class="btn btn-primary">فهمت</button>
+                                                <a href="#" class="text-primary"> الانتقال للصفحة الرئيسية</a>
+                                            </div>
 
-                                <button type="submit" class="btn btn-primary ml-3 mt-2">نشر المقال</button>
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <button type="button" data-toggle="modal" data-target="#confirm-global-modal" class="btn btn-primary ml-3 mt-2">نشر القصة</button>
                             </form>
                         </div>
                     </div>
@@ -192,9 +194,11 @@
             </div>
         </section>
         <!-- /.login -->
-
-
     </main>
+
+
+
+
 
     <footer class="footer">
         <div class="container">

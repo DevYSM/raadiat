@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/audioplayer.css" />
     <link rel="stylesheet" href="assets/css/all.css" />
     <link rel="stylesheet" href="assets/css/cropper.min.css" />
+    <link rel="stylesheet" href="assets/css/intlTelInput.min.css" />
     <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -348,7 +349,8 @@
                                     <div class="col-12 col-md-6">
                                         <div class="form-group">
                                             <label for="phone">رقم الجوال <a href="#" class="text-danger" data-toggle="modal" data-target="#confirm-global-modal">تأكيد رقم الجوال</a></label>
-                                            <input type="text" class="form-control" id="phone" value="01208984029">
+                                            <input type="tel" class="form-control phone" name="phone" id="phone">
+
                                         </div>
                                     </div>
                                     <!-- ./phone -->
@@ -638,6 +640,7 @@
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/audioplayer.js"></script>
     <script src="assets/js/cropper.min.js"></script>
+    <script src="assets/js/intlTelInput-jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
         AOS.init({});

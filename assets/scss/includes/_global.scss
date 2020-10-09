@@ -238,3 +238,17 @@ div.h4 {
         }
     }
 }
+
+.iti,
+.iti__flag-box {
+    display: block;
+}
+
+.iti--separate-dial-code .iti__selected-dial-code {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.select2-container {
+    width: 100%!important;
+}

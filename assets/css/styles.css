@@ -301,6 +301,20 @@ div.h4 {
     margin-bottom: 10px;
   }
 }
+.iti,
+.iti__flag-box {
+  display: block;
+}
+
+.iti--separate-dial-code .iti__selected-dial-code {
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+.select2-container {
+  width: 100% !important;
+}
+
 .navbar {
   background: #FFF;
 }
@@ -828,6 +842,13 @@ div.h4 {
   margin-top: 15px;
 }
 
+.success .success-box {
+  margin-bottom: 30px;
+}
+.success .success-box img {
+  height: 277px;
+}
+
 .footer {
   background: #535353;
   margin-top: 60px;
@@ -1159,6 +1180,9 @@ div.h4 {
   }
   .projects-list img {
     margin-bottom: 20px;
+  }
+  .projects-list .liked img {
+    margin-bottom: 0;
   }
 }
 /* End Responsive */
