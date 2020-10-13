@@ -306,7 +306,8 @@ button::-moz-focus-inner {
 input[type=checkbox],
 input[type=radio] {
     box-sizing: border-box;
-    padding: 0
+    padding: 0;
+    outline: none;
 }
 
 textarea {
@@ -1794,7 +1795,7 @@ pre code {
 .table td,
 .table th {
     padding: .75rem;
-    vertical-align: top;
+    vertical-align: middle;
     border-top: 1px solid #dee2e6
 }
 
@@ -3042,7 +3043,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary.focus,
 .btn-outline-primary:focus {
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .5)
+    box-shadow: unset
 }
 
 .btn-outline-primary.disabled,
@@ -3062,7 +3063,7 @@ fieldset:disabled a.btn {
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
 .show>.btn-outline-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .5)
+    box-shadow: unset
 }
 
 .btn-outline-secondary {

@@ -159,6 +159,11 @@ $(document).ready(function() {
         $(this).parent('.custom-file').append(`<strong class="mr-3 text-danger">${val}</strong>`);
     })
 
+    $('.toggle-submenu').on('click', function() {
+        $(this).toggleClass('rotate');
+        $(this).parents('.has-submenu').find('.submenu').toggle();
+    });
+
 })
 
 
@@ -258,13 +263,6 @@ $(function() {
         min: $.validator.format("Please enter a value greater than or equal to {0}.")
     });
 
-
-    $(".phone").intlTelInput({
-        allowDropdown: true,
-        autoHideDialCode: true,
-        formatOnDisplay: true,
-        separateDialCode: true,
-    });
 
     $('.select2').select2()
 

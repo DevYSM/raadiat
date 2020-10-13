@@ -58,7 +58,7 @@ img {
   -ms-display: flex;
 }
 
-.main-trainer-step .step-box img, .white-bg {
+.main-trainer-step .step-box img, .dark-bg, .white-bg {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -105,9 +105,19 @@ textarea {
   height: 4px;
 }
 
+.not-readable {
+  background: #E8F8F7;
+}
+
 .sm-avatar {
   width: 31px !important;
   height: 31px !important;
+  border-radius: 50%;
+}
+
+.md-avatar {
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50%;
 }
 
@@ -142,6 +152,16 @@ textarea {
   border-radius: 3px;
 }
 .white-bg:hover {
+  -webkit-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
+  box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
+}
+
+.dark-bg {
+  background: #003C43;
+  border-radius: 3px;
+}
+.dark-bg:hover {
   -webkit-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
   -moz-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
   box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
@@ -217,10 +237,10 @@ input[type=radio],
   position: absolute;
   top: 35%;
   right: 50%;
-  -webkit-transform: translate(50%, 50%);
-  -ms-transform: translate(50%, 50%);
-  -o-transform: translate(50%, 50%);
-  -moz-transform: translate(50%, 50%);
+  -webkit-transform: translate(50%, 0%);
+  -ms-transform: translate(50%, 0%);
+  -o-transform: translate(50%, 0%);
+  -moz-transform: translate(50%, 0%);
 }
 
 .circle-progress {
@@ -313,6 +333,50 @@ div.h4 {
 
 .select2-container {
   width: 100% !important;
+}
+
+.nav-pills .nav-link {
+  background: #FFF;
+  padding: 0.5rem 1.3rem;
+  border: 1px solid #DDD;
+  margin-left: 10px;
+  min-width: 150px;
+  text-align: center;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #424143;
+}
+.nav-pills .nav-link.active {
+  color: #1DBDB7;
+  border-color: #1DBDB7;
+  background: #FFF;
+}
+.nav-pills .nav-link img {
+  max-height: 31px;
+}
+
+.select2-container .select2-selection--single {
+  height: 38px;
+}
+
+.select2-container--default .select2-selection--single {
+  border: 1px solid #ced4da;
+  outline: none;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 38px;
+  outline: none;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 38px;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  outline: none;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #1DBDB7;
 }
 
 .navbar {
@@ -754,6 +818,10 @@ div.h4 {
 .blogs-section .blog-photo img {
   border-radius: 4px;
 }
+.blogs-section.workspaces .workspaces-widget img {
+  max-height: 185px;
+  object-fit: cover;
+}
 
 .user-profile .profile-photo {
   height: 121px !important;
@@ -847,6 +915,45 @@ div.h4 {
 }
 .success .success-box img {
   height: 277px;
+}
+
+.academy .academy-upgrade-box {
+  border-top-width: 14px !important;
+  min-height: 386px;
+}
+.academy .custom-margin {
+  margin-top: 74px;
+}
+.academy .custom-control {
+  margin-bottom: 10px;
+}
+.academy .submenu {
+  display: none;
+  padding-right: 15px;
+}
+.academy .toggle-submenu {
+  cursor: pointer;
+}
+.academy .toggle-submenu.rotate i {
+  transform: rotate(180deg);
+}
+
+.payment-methods .nav-pills {
+  justify-content: space-between;
+}
+.payment-methods .nav-pills .nav-item {
+  flex-basis: 32%;
+}
+.payment-methods .nav-pills .nav-link {
+  margin-left: 0;
+}
+.payment-methods .payment-history label.btn {
+  display: flex;
+  align-items: center;
+}
+.payment-methods .payment-history label.btn img {
+  width: 25px;
+  margin: 0 5px;
 }
 
 .footer {
@@ -1183,6 +1290,15 @@ div.h4 {
   }
   .projects-list .liked img {
     margin-bottom: 0;
+  }
+}
+/* End Responsive */
+@media (max-width: 992px) {
+  .academy .custom-margin {
+    margin-top: 30px;
+  }
+  .academy .academy-upgrade-box {
+    min-height: auto;
   }
 }
 /* End Responsive */

@@ -36,9 +36,19 @@ textarea {
     }
 }
 
+.not-readable {
+    background: #E8F8F7;
+}
+
 .sm-avatar {
     width: 31px!important;
     height: 31px!important;
+    border-radius: 50%;
+}
+
+.md-avatar {
+    width: 40px!important;
+    height: 40px!important;
     border-radius: 50%;
 }
 
@@ -72,6 +82,17 @@ textarea {
 
 .white-bg {
     background: $white-color;
+    border-radius: 3px;
+    @extend %transitions;
+    &:hover {
+        -webkit-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
+        -moz-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
+        box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
+    }
+}
+
+.dark-bg {
+    background: #003C43;
     border-radius: 3px;
     @extend %transitions;
     &:hover {
@@ -154,7 +175,7 @@ input[type="radio"],
         position: absolute;
         top: 35%;
         right: 50%;
-        @include prefixes(transform, translate(50%, 50%));
+        @include prefixes(transform, translate(50%, 0%));
     }
 }
 
@@ -251,4 +272,57 @@ div.h4 {
 
 .select2-container {
     width: 100%!important;
+}
+
+.nav-pills {
+    .nav-link {
+        background: $white-color;
+        padding: .5rem 1.3rem;
+        border: 1px solid #DDD;
+        margin-left: 10px;
+        min-width: 150px;
+        text-align: center;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $second-color;
+        &.active {
+            color: $main-color;
+            border-color: $main-color;
+            background: $white-color;
+        }
+        img {
+            max-height: 31px;
+        }
+    }
+}
+
+// Select 2 
+.select2-container {
+    .select2-selection--single {
+        height: 38px;
+    }
+}
+
+.select2-container--default {
+    .select2-selection--single {
+        border: 1px solid #ced4da;
+        outline: none;
+        .select2-selection__rendered {
+            line-height: 38px;
+            outline: none;
+        }
+        .select2-selection__arrow {
+            height: 38px;
+        }
+    }
+    .select2-search--dropdown {
+        .select2-search__field {
+            outline: none;
+        }
+    }
+    .select2-results__option--highlighted[aria-selected] {
+        background-color: $main-color;
+    }
 }

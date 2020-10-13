@@ -1,0 +1,24 @@
+.academy {
+    .academy-upgrade-box {
+        border-top-width: 14px!important;
+        min-height: 386px;
+    }
+    .custom-margin {
+        margin-top: 74px;
+    }
+    .custom-control {
+        margin-bottom: 10px;
+    }
+    .submenu {
+        display: none;
+        padding-right: 15px;
+    }
+    .toggle-submenu {
+        cursor: pointer;
+        &.rotate {
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.payment-methods {
+    .nav-pills {
+        justify-content: space-between;
+        .nav-item {
+            flex-basis: 32%;
+        }
+        .nav-link {
+            margin-left: 0;
+        }
+    }
+    .payment-history {
+        label {
+            &.btn {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 25px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
