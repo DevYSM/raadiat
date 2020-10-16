@@ -16,6 +16,11 @@
             color: $second-color;
         }
     }
+    &.women-entrepreneurs-index {
+        .women-entrepreneurs {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .meetings {
