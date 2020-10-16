@@ -121,6 +121,17 @@ textarea {
   border-radius: 50%;
 }
 
+.lg-avatar {
+  width: 96px !important;
+  height: 96px !important;
+  border-radius: 50%;
+}
+
+.sm-avatar, .md-avatar, .lg-avatar {
+  object-fit: cover;
+  object-position: center;
+}
+
 .unset-all {
   all: unset;
   cursor: pointer;

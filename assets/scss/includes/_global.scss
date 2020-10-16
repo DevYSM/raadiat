@@ -44,12 +44,26 @@ textarea {
     width: 31px!important;
     height: 31px!important;
     border-radius: 50%;
+    @extend %obj-fit;
 }
 
 .md-avatar {
     width: 40px!important;
     height: 40px!important;
     border-radius: 50%;
+    @extend %obj-fit;
+}
+
+.lg-avatar {
+    width: 96px!important;
+    height: 96px!important;
+    border-radius: 50%;
+    @extend %obj-fit;
+}
+
+%obj-fit {
+    object-fit: cover;
+    object-position: center;
 }
 
 .unset-all {
