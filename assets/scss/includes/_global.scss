@@ -66,6 +66,29 @@ textarea {
     object-position: center;
 }
 
+.dots-group {
+    margin-top: 20px;
+    span {
+        width: 10px;
+        height: 10px;
+        background-color: #D8D8D8;
+        border-radius: 50%;
+        margin: 0px 5px;
+        &.active {
+            background: $main-color;
+        }
+    }
+}
+
+.test-icon {
+    background-image: url(/assets/images/icons/test-icon.png);
+    width: 52px;
+    height: 52px;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+}
+
 .unset-all {
     all: unset;
     cursor: pointer;

@@ -267,3 +267,52 @@ $(function() {
     $('.select2').select2()
 
 });
+
+var countable = 2;
+// Start Append test
+$('#btn-add-new-test').click(function() {
+
+    let _append = `
+            <li id="row-${countable++}" class="d-flex mb-3">
+                <span class="test-icon"></span>
+                <div class="d-flex flex-column mr-3">
+                    <span class="mb-2">اختبار</span>
+                    <a href="#" class="text-primary question-modal-trigger" data-toggle="modal" data-target="#add-questions-modal">إضافة سؤال</a>
+                </div>
+            </li>
+    `;
+    $('#list-of-tests').find('ul').append(_append)
+});
+
+// Start Get Row number to add in the modal
+$(document).on('click', '.question-modal-trigger', function() {
+    $('#add-questions-modal').attr('data-row-id', $(this).parents('li').attr('id'))
+});
+var countable = 1;
+// trigger input to add questions
+$('#add-new-question').on('keyup', function(e) {
+    if (e.keyCode == 13) {
+
+        if ($(this).val().length == 0) {
+            alert('لا يمكن اضافة قيمة فارغة');
+            return
+        }
+
+        countable++;
+        let append = `
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="question-${countable}">
+            <label class="custom-control-label" for="question-${countable}"> 
+                ${$(this).val()}
+            </label>
+        </div>
+        `;
+        $('#questions-list').append(append);
+        $(this).val('');
+    }
+})
+
+
+$('#add-questions-modal').on('hidden.bs.modal', function(e) {
+    $('#questions-list').html('');
+})
