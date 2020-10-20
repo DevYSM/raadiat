@@ -51,5 +51,58 @@
                 }
             }
         }
+        .custom-control-input:checked~.custom-control-label::before {
+            border-color: $main-color;
+            background-color: $main-color;
+        }
+    }
+}
+
+.list-course-content {
+    // height: 500px;
+    // overflow: hidden;
+    // overflow-y: scroll;
+}
+
+.course-featured-img {
+    width: 100%;
+    max-height: 436px;
+    min-height: 436px;
+}
+
+.course-playlist {
+    height: 436px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.quizzes {
+    .wrong-answer {
+        background: rgb(236, 43, 43, 10%);
+        color: #EC2B2B;
+        position: relative;
+        &::before {
+            content: '\f00d';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            color: #EC2B2B;
+        }
+    }
+    .correct-answer {
+        background-color: rgba(29, 189, 77, 10%);
+        color: #1FB943;
+        position: relative;
+        &::before {
+            content: '\f00c';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            color: #1FB943;
+        }
     }
 }

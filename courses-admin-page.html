@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Include Css Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" href="assets/css/audioplayer.css" />
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" href="assets/css/cropper.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/lity.min.css" />
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <link rel="stylesheet" href="assets/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.steps.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- Application Title -->
+    <title>رياديات</title>
+    <!-- CDN Files-->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/icons/logo.png" alt="رياديات">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            تصفحي الدورات
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-categories" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h6>الأكاديمية العامة <a href="#" class="text-primary">إشتراك</a></h6>
+                                    <a class="dropdown-item" href="#">تسويق</a>
+                                    <a class="dropdown-item" href="#">محاسبة</a>
+                                    <a class="dropdown-item" href="#">إدارة</a>
+                                    <a class="dropdown-item" href="#">مالية</a>
+                                </div>
+                                <div class="col-6">
+                                    <h6>الأكاديمية المتخصصة <a href="#" class="text-primary">إشتراك</a></h6>
+                                    <a class="dropdown-item" href="#">الأزياء</a>
+                                    <a class="dropdown-item" href="#">المجوهرات</a>
+                                    <a class="dropdown-item" href="#">التصميم الداخلي</a>
+                                    <a class="dropdown-item" href="#">التقنية</a>
+                                    <a class="dropdown-item" href="#">التجارة الإلكترونية</a>
+                                </div>
+                            </div>
+                            <div class="text-center mt-3">
+                                <a href="#" class="text-primary">عرض الكل</a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الشبكة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الحاضنة</a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            خدماتنا
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">دورة رقم 1</a>
+                            <a class="dropdown-item" href="#">دورة رقم 2</a>
+                            <a class="dropdown-item" href="#">دورة رقم 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle position-relative" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            انشري تدريبك <span class="badge badge-success position-absolute">جديد</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">دورة رقم 1</a>
+                            <a class="dropdown-item" href="#">دورة رقم 2</a>
+                            <a class="dropdown-item" href="#">دورة رقم 3</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-between flex-wrap flex-column flex-lg-row right-column-of-navbar">
+
+                    <form class="form-inline my-2 my-lg-0 search-form">
+                        <input class="form-control " type="search" placeholder="ابحثي عن  دورات تدريبية, رائدات أعمال" aria-label="Search">
+                        <button class="btn-search" type="submit">
+                            <img src="assets/images/icons/search.png" alt="search-icon">
+                        </button>
+                    </form>
+                    <ul class="navbar-nav mr-sm-4 align-item-center user-actions">
+                        <li class="nav-item notify">
+                            <a class="nav-link" href="#">
+                                <img src="assets/images/icons/header/messages.png" alt="messages">
+                                <span class="notify-count">8</span>
+                            </a>
+
+                        </li>
+                        <li class="nav-item notify">
+                            <a class="nav-link" href="#">
+                                <img src="assets/images/icons/header/notfications.png" alt="notifications">
+                                <span class="notify-count">8</span>
+                            </a>
+                        </li>
+
+                        <li class="dropdown notify">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/icons/header/avatar.png" alt="">
+                            </a>
+                            <ul class="dropdown-menu notify-drop">
+                                <a class="dropdown-item" href="#">دوراتي</a>
+                                <a class="dropdown-item" href="#">الصفحة الشخصية</a>
+                                <a class="dropdown-item" href="#">اعدادات الحساب</a>
+                                <a class="dropdown-item" href="#">كوني مدربة</a>
+                                <a class="dropdown-item" href="#">نشر عرض</a>
+                                <a class="dropdown-item" href="#">تسجيل الخروج</a>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <a href="#" class="btn btn-primary">طوري للمنصة المميزة</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="trainer-steps course-step-content section">
+            <div class="container">
+                <!-- .row -->
+                <div class="row">
+                    <!-- .col-md-4 -->
+                    <div class="col-12 col-md-3">
+                        <div class="white-bg p-3">
+                            <ul class="list-unstyled mb-0">
+                                <!-- .li -->
+                                <li>
+                                    <img class="mb-2" src="assets/images/icons/courses/01.png" alt="eyes">
+                                    <p class="text-mute mb-2">المشاهدات</p>
+                                    <div>
+                                        <span class="font-weight-bold h3 mb-0  ml-1">1.2</span>
+                                        <span>ألف</span>
+                                    </div>
+                                </li>
+                                <!-- .li -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ./col-md-4 -->
+                    <!-- .col-md-4 -->
+                    <div class="col-12 col-md-3">
+                        <div class="white-bg p-3">
+                            <ul class="list-unstyled mb-0">
+                                <!-- .li -->
+                                <li>
+                                    <img class="mb-2" src="assets/images/icons/courses/02.png" alt="eyes">
+                                    <p class="text-mute mb-2">أكملوا الدورة</p>
+                                    <div>
+                                        <span class="font-weight-bold h3 mb-0 ml-1">1</span>
+                                        <span>ألف</span>
+                                    </div>
+                                </li>
+                                <!-- .li -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ./col-md-4 -->
+                    <!-- .col-md-4 -->
+                    <div class="col-12 col-md-3">
+                        <div class="white-bg p-3">
+                            <ul class="list-unstyled mb-0">
+                                <!-- .li -->
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <img class="mb-2" src="assets/images/icons/courses/03.png" alt="eyes">
+                                        <a href="#" class="text-primary">عرض الدرجات</a>
+                                    </div>
+                                    <p class="text-mute mb-2">معدل درجات الاختبارات</p>
+                                    <div>
+                                        <span class="font-weight-bold h3 mb-0">40/20</span>
+                                    </div>
+                                </li>
+                                <!-- .li -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ./col-md-4 -->
+                    <!-- .col-md-4 -->
+                    <div class="col-12 col-md-3">
+                        <div class="white-bg p-3">
+                            <ul class="list-unstyled mb-0">
+                                <!-- .li -->
+                                <li>
+                                    <div class="d-flex justify-content-between">
+                                        <img class="mb-2" src="assets/images/icons/courses/04.png" alt="eyes">
+                                        <a href="#" class="text-primary">عرض المشاريع</a>
+                                    </div>
+                                    <p class="text-mute mb-2">المشاريع المرسلة</p>
+                                    <div>
+                                        <span class="font-weight-bold h3 mb-0">40</span>
+                                    </div>
+                                </li>
+                                <!-- .li -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ./col-md-4 -->
+
+                    <!-- .col-md-6 -->
+                    <div class="col-12 col-md-6 mt-3">
+                        <div class="sub-title">
+                            <h2>خطة العمل ودراسة الجدوى المالية </h2>
+                            <p>نسرين السيد</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+
+                        <div class="text-left mt-4">
+                            <a href="#" class="btn btn-primary">تعديل</a>
+                            <a href="#" class="mr-2 ml-2 btn btn-outline-primary" data-toggle="modal" data-target="#confirm-global-modal">
+                                <i class="fas fa-share ml-1 "></i> <span>مشاركة</span>
+                            </a>
+                            <a href="#" class="btn btn-outline-danger" data-toggle="modal" data-target="#delete-modal">حذف</a>
+                        </div>
+
+                    </div>
+                    <!-- ./col-md-6 -->
+
+                </div>
+                <!-- ./row -->
+
+                <!-- .row -->
+                <div class="row">
+                    <!-- .col-md-9 -->
+                    <div class="col-12 col-md-8">
+                        <a href="#">
+                            <div class="play-icon-parent has-overlay">
+                                <img class="course-featured-img" src="assets/images/courses/01.png" alt="bg">
+                                <img class="play-icon" src="assets/images/icons/play.png" alt="play">
+                            </div>
+                        </a>
+
+                        <!-- .course-desc -->
+                        <div class="white-bg p-3  mt-4">
+                            <div class="course-desc">
+                                <h6>عن الدورة</h6>
+                                <div class="mt-2"> أكثر من 140,000 طالب مسجلين حتى الآن في النسخة الإنجليزية من هذه الدورة في 196 دولة يرجى العلم بأن هذه الدورة تحتوي على ترجمة باللغة العربية هل أنت جاهز للارتقاء إلى درجة أعلى في حياتك المهنية؟ في هذه الدورة، ستتعلم كل
+                                    ما تحتاج لمعرفته حول الأعمال والبيزنس ... بداية من إنشاء شركة وحتى طرحها للاكتتاب العام. وتغطي هذه الدورة كافة الموضوعات المهمة التي ستتعلمها عند الحصول على ماجستير إدارة الأعمال من أي كلية من الكليات المرموقة + مفاهيم
+                                    الأعمال المستمدة من الخبرة العلمية والتي ستجعلك أكثر نجاحًا
+                                    <!-- 
+                                    <a href="#" class="text-primary  d-flex align-items-center mt-2">
+                                        <span>عرض المزيد</span>
+                                        <i class="fas fa-chevron-down mr-1"></i>
+                                    </a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./course-desc -->
+
+                        <!-- .course-desc -->
+                        <div class="white-bg p-3  mt-4">
+                            <div class="course-desc">
+                                <h6>المرفقات</h6>
+                                <ul class="list-unstyled">
+                                    <!-- li -->
+                                    <li class="d-flex justify-content-between mb-2">
+                                        <div class="d-flex">
+                                            <span>
+                                                <img src="assets/images/icons/pencl.png" alt="pencl">
+                                            </span>
+                                            <span class="text-mute mr-3">
+                                                دراسة الجدوى
+                                                <br>
+                                                25 ميجا
+                                            </span>
+                                        </div>
+                                        <a href="#" class="text-priamry">تحميل</a>
+                                    </li>
+                                    <!-- ./li -->
+                                    <!-- li -->
+                                    <li class="d-flex justify-content-between mb-2">
+                                        <div class="d-flex">
+                                            <span>
+                                                <img src="assets/images/icons/pencl.png" alt="pencl">
+                                            </span>
+                                            <span class="text-mute mr-3">
+                                                دراسة الجدوى
+                                                <br>
+                                                25 ميجا
+                                            </span>
+                                        </div>
+                                        <a href="#" class="text-priamry">تحميل</a>
+                                    </li>
+                                    <!-- ./li -->
+                                    <!-- li -->
+                                    <li class="d-flex justify-content-between mb-2">
+                                        <div class="d-flex">
+                                            <span>
+                                                <img src="assets/images/icons/pencl.png" alt="pencl">
+                                            </span>
+                                            <span class="text-mute mr-3">
+                                                دراسة الجدوى
+                                                <br>
+                                                25 ميجا
+                                            </span>
+                                        </div>
+                                        <a href="#" class="text-priamry">تحميل</a>
+                                    </li>
+                                    <!-- ./li -->
+                                    <!-- li -->
+                                    <li class="d-flex justify-content-between mb-2">
+                                        <div class="d-flex  ">
+                                            <span>
+                                                <img src="assets/images/icons/pencl.png" alt="pencl">
+                                            </span>
+                                            <span class="text-mute mr-3">
+                                                دراسة الجدوى
+                                                <br>
+                                                25 ميجا
+                                            </span>
+                                        </div>
+                                        <a href="#" class="text-priamry">تحميل</a>
+                                    </li>
+                                    <!-- ./li -->
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <!-- ./course-desc -->
+
+                        <!-- .comments -->
+                        <div class="white-bg p-3 mt-4 mb-3 mb-md-0">
+                            <h6 class="mb-3">التعليقات</h6>
+                            <ul class="comments list-unstyled">
+                                <li>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <div class="d-flex flex-wrap">
+                                            <img src="assets/images/icons/header/avatar.png" class="sm-avatar" alt="avatar">
+                                            <span class="d-flex flex-column mr-3">
+                                                <span>يمنى فريد</span>
+                                            <span class="text-secondary">رائدة أعمال</span>
+                                            </span>
+                                        </div>
+                                        <span class="text-secondary font-weight-bold">
+                                            منذ 5 أيام
+                                        </span>
+                                    </div>
+                                    <div class="comment mt-2 pr-5">
+                                        رائع جداً، استفدت كتير
+                                    </div>
+                                    <hr class="mrl-hr">
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <div class="d-flex flex-wrap">
+                                            <img src="assets/images/icons/header/avatar.png" class="sm-avatar" alt="avatar">
+                                            <span class="d-flex flex-column mr-3">
+                                                <span>يمنى فريد</span>
+                                            <span class="text-secondary">رائدة أعمال</span>
+                                            </span>
+                                        </div>
+                                        <span class="text-secondary font-weight-bold">
+                                            منذ 5 أيام
+                                        </span>
+                                    </div>
+                                    <div class="comment mt-2 pr-5">
+                                        رائع جداً، استفدت كتير
+                                    </div>
+                                    <hr class="mrl-hr">
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between flex-wrap">
+                                        <div class="d-flex flex-wrap">
+                                            <img src="assets/images/icons/header/avatar.png" class="sm-avatar" alt="avatar">
+                                            <span class="d-flex flex-column mr-3">
+                                                <span>يمنى فريد</span>
+                                            <span class="text-secondary">رائدة أعمال</span>
+                                            </span>
+                                        </div>
+                                        <span class="text-secondary font-weight-bold">
+                                            منذ 5 أيام
+                                        </span>
+                                    </div>
+                                    <div class="comment mt-2 pr-5">
+                                        رائع جداً، استفدت كتير
+                                    </div>
+                                    <hr class="mrl-hr">
+                                </li>
+                            </ul>
+                            <!-- <a href="#" class="text-primary d-flex align-items-center">
+                                <span>عرض المزيد</span>
+                                <i class="fas fa-chevron-down mr-1"></i>
+                            </a> -->
+
+                            <form action="" class="add-comment mt-3 needs-validation" novalidate>
+                                <div class="d-flex align-items-center">
+                                    <img src="assets/images/icons/header/avatar.png" class="sm-avatar" alt="avatar">
+                                    <textarea style="background-color: #F8F8F8!important;border:none" class="form-control mr-3 bg-light" name="" id="" rows="1" placeholder="اكتبي تعليقك" required></textarea>
+                                    <button class="unset-all text-primary mr-3">نشر</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- ./comments -->
+
+
+
+
+                    </div>
+                    <!-- ./col-md-9 -->
+                    <!-- .col-md-3 -->
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled white-bg pb-1 course-playlist">
+                            <!-- .li -->
+                            <li class="has-active pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+                            <!-- .li -->
+                            <li class=" pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+                            <!-- .li -->
+                            <li class=" pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+                            <!-- .li -->
+                            <li class=" pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+                            <!-- .li -->
+                            <li class=" pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+                            <!-- .li -->
+                            <li class=" pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+                            <!-- .li -->
+                            <li class=" pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+                            <!-- .li -->
+                            <li class=" pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+                            <!-- .li -->
+                            <li class=" pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+                            <!-- .li -->
+                            <li class=" pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+                            <!-- .li -->
+                            <li class=" pt-2 pb-2 pr-3 pl-3 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <span>
+                                        <i class="fas fa-check ml-3 text-primary"></i>
+                                        1. المقدمة
+                                    </span>
+                                    <span>
+                                        04:22
+                                    </span>
+                                </div>
+                            </li>
+                            <!-- ./li -->
+
+
+
+                        </ul>
+
+                        <div class="white-bg p-3 mt-3">
+                            <div class="d-flex justify-content-between">
+                                <span class="h4 font-weight-bold">4.0</span>
+                                <a href="#" class="text-primary">عرض المراجعات</a>
+                            </div>
+
+                            <div class="rate">
+                                <i class="fas fa-star orange-color"></i>
+                                <i class="fas fa-star orange-color"></i>
+                                <i class="fas fa-star orange-color"></i>
+                                <i class="fas fa-star orange-color"></i>
+                                <i class="far fa-star grey-color"></i>
+                                <br>
+                                <span class="text-mute mt-2 d-block">31 مراجعات</span>
+                            </div>
+
+                            <div class="progress-rate mt-3">
+                                <!-- .progress-status -->
+                                <div class="mb-2 progress-status">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>5 نجوم</span>
+                                        <span>(15)</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <!-- ./progress-status -->
+                                <!-- .progress-status -->
+                                <div class="mb-2 progress-status">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>4 نجوم</span>
+                                        <span>(15)</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <!-- ./progress-status -->
+                                <!-- .progress-status -->
+                                <div class="mb-2 progress-status">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>3 نجوم</span>
+                                        <span>(15)</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <!-- ./progress-status -->
+                                <!-- .progress-status -->
+                                <div class="mb-2 progress-status">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>2 نجمة</span>
+                                        <span>(15)</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <!-- ./progress-status -->
+                                <!-- .progress-status -->
+                                <div class="mb-2 progress-status">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>1 نجمة</span>
+                                        <span>(15)</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <!-- ./progress-status -->
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- ./col-md-3 -->
+                </div>
+                <!-- ./row -->
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <!-- start col -->
+                <div class="col-12 col-md-12  col-lg-3">
+                    <div class="footer-logo">
+                        <a href="#">
+                            <img src="assets/images/icons/white-logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="social-media" role="group" aria-label="Basic example">
+
+                        <a href="#">
+                            <img src="assets/images/icons/social/linkedin-in.png" alt="linkedin-in">
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/icons/social/instagram.png" alt="instagram">
+                        </a>
+
+                        <a href="#">
+                            <img src="assets/images/icons/social/twitter.png" alt="twitter">
+                        </a>
+                        <a href="#">
+                            <img src="assets/images/icons/social/facebook.png" alt="facebook">
+                        </a>
+                    </div>
+                    <div class="btn-group privacy-policy" role="group" aria-label="Basic example">
+                        <a href="#">
+                            شروط الاستخدام
+                        </a>
+                        <span class="v-divider"> | </span>
+                        <a href="#">
+                            سياسة الخصوصية
+                        </a>
+
+                    </div>
+                </div>
+                <!-- ./col -->
+                <!-- start col -->
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h6>الشركة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">لماذا رياديات</a></li>
+                        <li><a href="#">عن رياديات</a></li>
+                        <li><a href="#">المدونة</a></li>
+                        <li><a href="#">قصص نجاح</a></li>
+                    </ul>
+                </div>
+                <!-- ./col -->
+                <!-- start col -->
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h6>المساعدة</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <!-- ./col -->
+                <!-- start col -->
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h6>انضمي إلينا</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">الأكاديمية</a></li>
+                        <li><a href="#">الشبكة</a></li>
+                        <li><a href="#">سجلي كمدربة</a></li>
+                    </ul>
+                </div>
+                <!-- ./col -->
+                <!-- start col -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h6>اشتركي بالقائمة البريدية</h6>
+                    <form class="subscribe">
+                        <div class="form-group">
+                            <input autocomplete="off" type="email" class="form-control " name="email" id="email" placeholder="البريد الإلكتروني">
+                            <button class="unset-all" type="submit">
+                                <img src="assets/images/icons/go.png" alt="search-icon">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- ./col -->
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirm-global-modal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">مشاركة عبر</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Add Share Icons here
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">
+                        هل انت متأكدة من الحذف
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="" class="needs-validation" novalidate>
+                    <div class="modal-body">
+                        <div class="form-group mb-0 mt-1">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required placeholder="سبب الحذف">
+                            <small id="emailHelp" class="form-text text-muted">
+                                سيتم مراجعة السبب قبل إجراء الحذف
+                            </small>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-start">
+                        <button type="submit" class="btn btn-danger">حذف</button>
+                        <a href="#" class="text-primary">تأكيد</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="backdrop"></div>
+    <!-- Include JS Files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap-rtl.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/lity.min.js"></script>
+    <script src="assets/js/select2.full.min.js"></script>
+    <script src="assets/js/audioplayer.js"></script>
+    <script src="assets/js/cropper.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/jquery.steps.min.js"></script>
+    <script src="assets/js/intlTelInput-jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        AOS.init({});
+    </script>
+
+</body>
+
+</html>

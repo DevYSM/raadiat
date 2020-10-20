@@ -18,7 +18,7 @@
 })();
 
 
-
+$('#my-list').sortable();
 (function() {
     "use strict"; // Start of use strict
 
@@ -277,7 +277,7 @@ $('#btn-add-new-test').click(function() {
                 <span class="test-icon"></span>
                 <div class="d-flex flex-column mr-3">
                     <span class="mb-2">اختبار</span>
-                    <a href="#" class="text-primary question-modal-trigger" data-toggle="modal" data-target="#add-questions-modal">إضافة سؤال</a>
+                    <a href="#" class="text-primary question-modal-trigger" >إضافة سؤال</a>
                 </div>
             </li>
     `;
@@ -288,7 +288,7 @@ $('#btn-add-new-test').click(function() {
 $(document).on('click', '.question-modal-trigger', function() {
     $('#add-questions-modal').attr('data-row-id', $(this).parents('li').attr('id'))
 });
-var countable = 1;
+var countableRows = 1;
 // trigger input to add questions
 $('#add-new-question').on('keyup', function(e) {
     if (e.keyCode == 13) {
@@ -298,11 +298,11 @@ $('#add-new-question').on('keyup', function(e) {
             return
         }
 
-        countable++;
+        countableRows++;
         let append = `
         <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="question-${countable}">
-            <label class="custom-control-label" for="question-${countable}"> 
+            <input type="checkbox" class="custom-control-input" id="question-${countableRows}">
+            <label class="custom-control-label" for="question-${countableRows}"> 
                 ${$(this).val()}
             </label>
         </div>

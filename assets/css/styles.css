@@ -146,6 +146,11 @@ textarea {
   background: #1DBDB7;
 }
 
+.mrl-hr {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
 .test-icon {
   background-image: url(/assets/images/icons/test-icon.png);
   width: 52px;
@@ -153,6 +158,63 @@ textarea {
   background-position: center;
   background-size: contain;
   display: inline-block;
+}
+
+.list-icon {
+  background-image: url(/assets/images/icons/list.png);
+  background-repeat: no-repeat;
+  background-position: center right 10px;
+  padding-right: 40px !important;
+}
+
+.grey-play-icon {
+  background-image: url(/assets/images/icons/grey-play-icon.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding-right: 30px;
+  margin-right: 10px;
+}
+
+.has-overlay {
+  position: relative;
+}
+.has-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.has-active {
+  background: #E8F8F7;
+}
+
+.orange-color {
+  color: #EAA93F;
+  font-size: 18px;
+}
+
+.sm-font {
+  font-size: 14px !important;
+}
+
+.grey-color {
+  color: #D8D8D8;
+  font-size: 18px;
+}
+
+.progress-rate span {
+  font-weight: 600;
+  font-size: 13px;
+}
+.progress-rate .progress {
+  height: 0.7rem;
+}
+.progress-rate .progress .progress-bar {
+  background: #EAA93F;
 }
 
 .unset-all {
@@ -269,12 +331,12 @@ input[type=radio],
 }
 .play-icon-parent .play-icon {
   position: absolute;
-  top: 35%;
+  top: 50%;
   right: 50%;
-  -webkit-transform: translate(50%, 0%);
-  -ms-transform: translate(50%, 0%);
-  -o-transform: translate(50%, 0%);
-  -moz-transform: translate(50%, 0%);
+  -webkit-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  -o-transform: translate(50%, -50%);
+  -moz-transform: translate(50%, -50%);
 }
 
 .circle-progress {
@@ -684,6 +746,51 @@ div.h4 {
 .course-step-content #questions-list .custom-checkbox .custom-control-label:before {
   border-color: #b91f1f;
   background-color: #b91f1f;
+}
+.course-step-content #questions-list .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #1DBDB7;
+  background-color: #1DBDB7;
+}
+
+.course-featured-img {
+  width: 100%;
+  max-height: 436px;
+  min-height: 436px;
+}
+
+.course-playlist {
+  height: 436px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.quizzes .wrong-answer {
+  background: rgba(236, 43, 43, 0.1);
+  color: #EC2B2B;
+  position: relative;
+}
+.quizzes .wrong-answer::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  color: #EC2B2B;
+}
+.quizzes .correct-answer {
+  background-color: rgba(29, 189, 77, 0.1);
+  color: #1FB943;
+  position: relative;
+}
+.quizzes .correct-answer::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  color: #1FB943;
 }
 
 .public-leading-businesses-section .lb-widget {
