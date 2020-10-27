@@ -19,7 +19,8 @@
     <!-- Application Title -->
     <title>رياديات</title>
     <!-- CDN Files-->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -28,14 +29,16 @@
             <a class="navbar-brand" href="#">
                 <img src="assets/images/icons/logo.png" alt="رياديات">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             تصفحي الدورات
                         </a>
                         <div class="dropdown-menu dropdown-menu-categories" aria-labelledby="navbarDropdown">
@@ -71,7 +74,8 @@
 
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             خدماتنا
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -81,7 +85,8 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle position-relative" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle position-relative" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             انشري تدريبك <span class="badge badge-success position-absolute">جديد</span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -94,7 +99,8 @@
                 <div class="d-flex justify-content-between flex-wrap flex-column flex-lg-row right-column-of-navbar">
 
                     <form class="form-inline my-2 my-lg-0 search-form">
-                        <input class="form-control " type="search" placeholder="ابحثي عن  دورات تدريبية, رائدات أعمال" aria-label="Search">
+                        <input class="form-control " type="search" placeholder="ابحثي عن  دورات تدريبية, رائدات أعمال"
+                            aria-label="Search">
                         <button class="btn-search" type="submit">
                             <img src="assets/images/icons/search.png" alt="search-icon">
                         </button>
@@ -115,7 +121,8 @@
                         </li>
 
                         <li class="dropdown notify">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
                                 <img src="assets/images/icons/header/avatar.png" alt="">
                             </a>
                             <ul class="dropdown-menu notify-drop">
@@ -136,29 +143,124 @@
     </header>
 
     <main>
-        <div class="trainer-steps course-step-content section">
+        <section class="section faq">
             <div class="container">
                 <div class="row">
-
-                    <div class="col-12 mt-4">
-                        <h6 class="h4 mb-4">إضافة مشروع</h6>
-                        <div class="white-bg p-3">
-                            <form class="needs-validation" novalidate>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">تفاصيل المشروع</label>
-                                    <textarea class="form-control" rows="10" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">اضافة</button>
-                                <a href="#" class="btn btn-danger">إلغاء</a>
-                            </form>
+                    <div class="col-12">
+                        <div class="title">
+                            <h2>الإسلئة الشائعة</h2>
                         </div>
                     </div>
+                    <!-- .filtration -->
+                    <div class="col-12 mt-3">
+                        <div class="filtration btn-groups mb-4">
+                            <a href="#" class="mr-2 btn btn-outline-primary active">كل المواضيع</a>
+                            <a href="#" class="mr-2 btn btn-outline-primary">ريادة الأعمال</a>
+                            <a href="#" class="mr-2 btn btn-outline-primary">المالية</a>
+                            <a href="#" class="mr-2 btn btn-outline-primary">التطوير</a>
+                            <a href="#" class="mr-2 btn btn-outline-primary">الادارة</a>
+                        </div>
+                    </div>
+                    <!-- /.filtration -->
+
+                    <div class="col-12">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card white-bg">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button
+                                            class="btn btn-link btn-block text-right d-flex align-items-center justify-content-between "
+                                            type="button" data-toggle="collapse" data-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne">
+                                            <span>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                                                سيلهي</span>
+                                            <i class="fas fa-chevron-down "></i>
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن
+                                        التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك
+                                        يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف
+                                        عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي
+                                        الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب
+                                        تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum"
+                                        في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى
+                                        السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة،
+                                        وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card white-bg">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button
+                                            class="btn btn-link btn-block text-right d-flex align-items-center justify-content-between"
+                                            type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                            aria-expanded="true" aria-controls="collapseTwo">
+                                            <span>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                                                سيلهي</span>
+                                            <i class="fas fa-chevron-down "></i>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن
+                                        التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك
+                                        يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف
+                                        عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي
+                                        الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب
+                                        تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum"
+                                        في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى
+                                        السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة،
+                                        وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card white-bg">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button
+                                            class="btn btn-link btn-block text-right d-flex align-items-center justify-content-between"
+                                            type="button" data-toggle="collapse" data-target="#collapseThree"
+                                            aria-expanded="true" aria-controls="collapseThree">
+                                            <span>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                                                سيلهي</span>
+                                            <i class="fas fa-chevron-down "></i>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن
+                                        التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك
+                                        يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف
+                                        عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي
+                                        الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب
+                                        تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum"
+                                        في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى
+                                        السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة،
+                                        وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
+        </section>
     </main>
-
-
 
 
 
@@ -236,7 +338,8 @@
                     <h6>اشتركي بالقائمة البريدية</h6>
                     <form class="subscribe">
                         <div class="form-group">
-                            <input autocomplete="off" type="email" class="form-control " name="email" id="email" placeholder="البريد الإلكتروني">
+                            <input autocomplete="off" type="email" class="form-control " name="email" id="email"
+                                placeholder="البريد الإلكتروني">
                             <button class="unset-all" type="submit">
                                 <img src="assets/images/icons/go.png" alt="search-icon">
                             </button>

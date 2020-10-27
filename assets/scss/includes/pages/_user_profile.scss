@@ -10,6 +10,7 @@
         padding: 10px 0;
         .nav-link {
             color: $second-color;
+            border: none;
             border-bottom: 1px solid #F3F3F3;
             border-radius: 0;
             &:last-child {

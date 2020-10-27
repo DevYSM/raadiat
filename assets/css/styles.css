@@ -58,7 +58,7 @@ img {
   -ms-display: flex;
 }
 
-.main-trainer-step .step-box img, .dark-bg, .white-bg {
+.main-trainer-step .step-box img, .accordion .card .card-header button i, .dark-bg, .white-bg {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -89,6 +89,10 @@ main {
 #backdrop.backdrop {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.show-read-more .more-text {
+  display: none;
 }
 
 .profile-photo {
@@ -475,6 +479,65 @@ div.h4 {
   background-color: #1DBDB7;
 }
 
+.rate-stars {
+  float: left;
+  height: auto;
+  padding: 0;
+}
+
+.rate-stars:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.rate-stars:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.rate-stars:not(:checked) > label:before {
+  content: "★ ";
+}
+
+.rate-stars > input:checked ~ label {
+  color: #ffc700;
+}
+
+.rate-stars:not(:checked) > label:hover,
+.rate-stars:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+
+.rate-stars > input:checked + label:hover,
+.rate-stars > input:checked + label:hover ~ label,
+.rate-stars > input:checked ~ label:hover,
+.rate-stars > input:checked ~ label:hover ~ label,
+.rate-stars > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.accordion .card {
+  border: none;
+}
+.accordion .card .card-header {
+  background: #FFF;
+  border: none;
+}
+.accordion .card .card-header button {
+  color: #424143;
+}
+.accordion .card .card-header button.btn-link.focus, .accordion .card .card-header button.btn-link:focus, .accordion .card .card-header button:hover {
+  text-decoration: none;
+  color: #1DBDB7;
+}
+.accordion .card .card-header button.collapsed i {
+  transform: rotate(180deg);
+}
 .navbar {
   background: #FFF;
 }
@@ -763,6 +826,16 @@ div.h4 {
   overflow: hidden;
   overflow-y: scroll;
 }
+.course-playlist i {
+  width: 20px;
+  text-align: center;
+}
+.course-playlist .has-active {
+  color: #1DBDB7 !important;
+}
+.course-playlist .has-active i {
+  color: #1DBDB7 !important;
+}
 
 .quizzes .wrong-answer {
   background: rgba(236, 43, 43, 0.1);
@@ -993,6 +1066,7 @@ div.h4 {
 }
 .user-profile .nav-pills .nav-link {
   color: #424143;
+  border: none;
   border-bottom: 1px solid #F3F3F3;
   border-radius: 0;
 }

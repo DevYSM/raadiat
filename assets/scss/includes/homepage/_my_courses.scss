@@ -74,6 +74,16 @@
     height: 436px;
     overflow: hidden;
     overflow-y: scroll;
+    i {
+        width: 20px;
+        text-align: center;
+    }
+    .has-active {
+        i {
+            color: $main-color!important;
+        }
+        color: $main-color!important;
+    }
 }
 
 .quizzes {

@@ -14,10 +14,15 @@ main {
     bottom: 0;
     z-index: -1;
     @include prefixes(transition, all 0.3s ease-in-out);
+
     &.backdrop {
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.3);
     }
+}
+
+.show-read-more .more-text {
+    display: none;
 }
 
 .profile-photo {
@@ -41,22 +46,22 @@ textarea {
 }
 
 .sm-avatar {
-    width: 31px!important;
-    height: 31px!important;
+    width: 31px !important;
+    height: 31px !important;
     border-radius: 50%;
     @extend %obj-fit;
 }
 
 .md-avatar {
-    width: 40px!important;
-    height: 40px!important;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 50%;
     @extend %obj-fit;
 }
 
 .lg-avatar {
-    width: 96px!important;
-    height: 96px!important;
+    width: 96px !important;
+    height: 96px !important;
     border-radius: 50%;
     @extend %obj-fit;
 }
@@ -68,12 +73,14 @@ textarea {
 
 .dots-group {
     margin-top: 20px;
+
     span {
         width: 10px;
         height: 10px;
         background-color: #D8D8D8;
         border-radius: 50%;
         margin: 0px 5px;
+
         &.active {
             background: $main-color;
         }
@@ -98,7 +105,7 @@ textarea {
     background-image: url(/assets/images/icons/list.png);
     background-repeat: no-repeat;
     background-position: center right 10px;
-    padding-right: 40px!important;
+    padding-right: 40px !important;
 }
 
 .grey-play-icon {
@@ -111,6 +118,7 @@ textarea {
 
 .has-overlay {
     position: relative;
+
     &::before {
         content: '';
         position: absolute;
@@ -145,8 +153,10 @@ textarea {
         font-weight: 600;
         font-size: 13px;
     }
+
     .progress {
         height: 0.7rem;
+
         .progress-bar {
             background: #EAA93F;
         }
@@ -163,6 +173,7 @@ textarea {
         font-size: $title-font-size;
         color: $title-main-color;
     }
+
     p {
         font-size: $md-font-size;
         color: $description-main-color;
@@ -171,6 +182,7 @@ textarea {
 
 .sub-title {
     margin-bottom: 20px;
+
     h2 {
         font-size: $sub-title-font-size;
         color: $title-main-color;
@@ -185,6 +197,7 @@ textarea {
     background: $white-color;
     border-radius: 3px;
     @extend %transitions;
+
     &:hover {
         -webkit-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
         -moz-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
@@ -196,6 +209,7 @@ textarea {
     background: #003C43;
     border-radius: 3px;
     @extend %transitions;
+
     &:hover {
         -webkit-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
         -moz-box-shadow: 0px 32px 49px -34px rgba(0, 0, 0, 0.44);
@@ -209,6 +223,7 @@ textarea {
     padding: 0.5rem 2.3rem 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
+
     input,
     label {
         cursor: pointer;
@@ -223,10 +238,12 @@ textarea {
     .custom-file-input {
         max-width: 120px;
     }
+
     .custom-file-label {
         max-width: 120px;
         cursor: pointer;
         border: 1px solid $main-color;
+
         &::after {
             right: 0;
             text-align: center;
@@ -250,28 +267,31 @@ input[type="radio"],
 
 .gradient-bg {
     background: rgb(51, 194, 187);
-    background: linear-gradient( 90deg, rgba(51, 194, 187, 1) 0%, rgba(35, 232, 199, 1) 100%);
+    background: linear-gradient(90deg, rgba(51, 194, 187, 1) 0%, rgba(35, 232, 199, 1) 100%);
 }
 
 .filtration {
     .btn {
-        border-color: #E7E7E7!important;
+        border-color: #E7E7E7 !important;
         color: #505050;
+
         &.active {
-            border-color: #E2F2F1!important;
-            background-color: #E2F2F1!important;
-            color: $main-color!important;
+            border-color: #E2F2F1 !important;
+            background-color: #E2F2F1 !important;
+            color: $main-color !important;
         }
+
         &:hover {
-            border-color: #E2F2F1!important;
-            background-color: #E2F2F1!important;
-            color: $main-color!important;
+            border-color: #E2F2F1 !important;
+            background-color: #E2F2F1 !important;
+            color: $main-color !important;
         }
     }
 }
 
 .play-icon-parent {
     position: relative;
+
     .play-icon {
         position: absolute;
         top: 50%;
@@ -285,6 +305,7 @@ input[type="radio"],
     height: 150px;
     background: none;
     position: relative;
+
     &::after {
         content: "";
         width: 100%;
@@ -295,6 +316,7 @@ input[type="radio"],
         top: 0;
         left: 0;
     }
+
     >span {
         width: 50%;
         height: 100%;
@@ -303,8 +325,10 @@ input[type="radio"],
         top: 0;
         z-index: 1;
     }
+
     .progress-left {
         left: 0;
+
         .progress-bar {
             left: 100%;
             border-top-right-radius: 80px;
@@ -314,6 +338,7 @@ input[type="radio"],
             transform-origin: center left;
         }
     }
+
     .progress-bar {
         width: 100%;
         height: 100%;
@@ -323,8 +348,10 @@ input[type="radio"],
         position: absolute;
         top: 0;
     }
+
     .progress-right {
         right: 0;
+
         .progress-bar {
             left: -100%;
             border-top-left-radius: 80px;
@@ -334,6 +361,7 @@ input[type="radio"],
             transform-origin: center right;
         }
     }
+
     .progress-value {
         position: absolute;
         top: 0;
@@ -372,7 +400,7 @@ div.h4 {
 }
 
 .select2-container {
-    width: 100%!important;
+    width: 100% !important;
 }
 
 .nav-pills {
@@ -388,11 +416,13 @@ div.h4 {
         align-items: center;
         justify-content: center;
         color: $second-color;
+
         &.active {
             color: $main-color;
             border-color: $main-color;
             background: $white-color;
         }
+
         img {
             max-height: 31px;
         }
@@ -410,20 +440,101 @@ div.h4 {
     .select2-selection--single {
         border: 1px solid #ced4da;
         outline: none;
+
         .select2-selection__rendered {
             line-height: 38px;
             outline: none;
         }
+
         .select2-selection__arrow {
             height: 38px;
         }
     }
+
     .select2-search--dropdown {
         .select2-search__field {
             outline: none;
         }
     }
+
     .select2-results__option--highlighted[aria-selected] {
         background-color: $main-color;
     }
+}
+
+.rate-stars {
+    float: left;
+    height: auto;
+    padding: 0;
+}
+
+.rate-stars:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate-stars:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate-stars:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate-stars>input:checked~label {
+    color: #ffc700;
+}
+
+.rate-stars:not(:checked)>label:hover,
+.rate-stars:not(:checked)>label:hover~label {
+    color: #deb217;
+}
+
+.rate-stars>input:checked+label:hover,
+.rate-stars>input:checked+label:hover~label,
+.rate-stars>input:checked~label:hover,
+.rate-stars>input:checked~label:hover~label,
+.rate-stars>label:hover~input:checked~label {
+    color: #c59b08;
+}
+
+
+.accordion {
+    .card {
+        border: none;
+
+        .card-header {
+            background: $white-color;
+            border: none;
+            
+            button {
+                color: $second-color;
+
+                &.btn-link.focus,
+                &.btn-link:focus,
+                &:hover {
+                    text-decoration: none;
+                    color: $main-color;
+                }
+
+                &.collapsed {
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                i {
+                    @extend %transitions;
+                }
+
+            }
+        }
+    }
+
 }

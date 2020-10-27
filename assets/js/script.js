@@ -1,12 +1,12 @@
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
+(function () {
     'use strict';
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.getElementsByClassName('needs-validation');
         // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
                 if (form.checkValidity() === false) {
                     event.preventDefault();
                     event.stopPropagation();
@@ -18,8 +18,7 @@
 })();
 
 
-$('#my-list').sortable();
-(function() {
+(function () {
     "use strict"; // Start of use strict
 
     // Select all links with hashes
@@ -27,7 +26,7 @@ $('#my-list').sortable();
         // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
-        .click(function(event) {
+        .click(function (event) {
             // On-page links
             if (
                 location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
@@ -42,7 +41,7 @@ $('#my-list').sortable();
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top - 50
-                    }, 1000, function() {
+                    }, 1000, function () {
                         // Callback after animation
 
                     });
@@ -52,14 +51,14 @@ $('#my-list').sortable();
 
 })();
 
-$(window).on("load", function() {
+$(window).on("load", function () {
     if ($(this).scrollTop() > 30) {
         $("#navbar ").addClass('fixed-top');
     } else {
         $("#navbar ").removeClass('fixed-top')
     }
 })
-$(window).scroll(function() {
+$(window).scroll(function () {
     if ($(this).scrollTop() > 30) {
         $("#navbar ").addClass('fixed-top');
     } else {
@@ -68,49 +67,49 @@ $(window).scroll(function() {
     }
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     'use strict';
-    $('.navbar .search-form .form-control').focus(function() {
+    $('.navbar .search-form .form-control').focus(function () {
         $('#backdrop').addClass('backdrop')
     })
-    $('.navbar .search-form .form-control').focusout(function() {
+    $('.navbar .search-form .form-control').focusout(function () {
         $('#backdrop').removeClass('backdrop').addClass('not-has-backdrop')
     })
 })
 
 
-$(function() {
+$(function () {
     $('audio').audioPlayer();
 });
 
 
 //has-cropper
 
-$(function() {
-    $('.has-counter').each(function() {
+$(function () {
+    $('.has-counter').each(function () {
         $(this).next('span').text($(this).val().length + '/' + $(this).attr('maxlength'))
     });
-    $('.has-counter').on('keydown', function() {
+    $('.has-counter').on('keydown', function () {
         $(this).next('span').text($(this).val().length + '/' + $(this).attr('maxlength'))
     });
 
     // Trigger data text of specializations
-    $('.has-data-text').change(function() {
+    $('.has-data-text').change(function () {
         $('#data-text').text($(this).attr('data-text'));
     });
     $('#data-text').text($('.has-data-text:checked').attr('data-text'))
 
 })
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     // trigger toggle disable event
-    $(document).on('dblclick', '.dblclick-event', function() {
+    $(document).on('dblclick', '.dblclick-event', function () {
         $(this).prev().prop('disabled', '');
         $(this).prop('disabled', '');
     })
 
-    $(document).on('click', '.profile-photo, .upload-photo-btn', function() {
+    $(document).on('click', '.profile-photo, .upload-photo-btn', function () {
         $('#profile-photo').trigger('click');
     })
 
@@ -119,7 +118,7 @@ $(document).ready(function() {
         $('.user-edit-profile .residency-number').removeClass('d-none');
     }
 
-    $('.type-of-accommodation input[type="radio"]').change(function() {
+    $('.type-of-accommodation input[type="radio"]').change(function () {
         if ($(this).is(':checked') && $(this).hasClass('has-hidden-input')) {
             $('.user-edit-profile .residency-number').removeClass('d-none');
         } else {
@@ -127,7 +126,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.user-delete-account input[type="radio"]').change(function() {
+    $('.user-delete-account input[type="radio"]').change(function () {
         if ($(this).is(':checked') && $(this).hasClass('has-hidden-input')) {
             $('.user-delete-account .reason-delete-input').removeClass('d-none');
         } else {
@@ -136,14 +135,14 @@ $(document).ready(function() {
     });
 
 
-    $(document).on('change', '#profile-photo', function() {
+    $(document).on('change', '#profile-photo', function () {
         readURL(this, $('.preview'))
     });
 
     function readURL(input, preview) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 preview.prop('src', e.target.result)
             }
             reader.readAsDataURL(input.files[0]); // convert to base64 string
@@ -153,13 +152,13 @@ $(document).ready(function() {
 
     // custom-file-input
 
-    $(document).on('change', '.custom-file-input', function() {
+    $(document).on('change', '.custom-file-input', function () {
         let val = $(this).val();
         console.log(val);
         $(this).parent('.custom-file').append(`<strong class="mr-3 text-danger">${val}</strong>`);
     })
 
-    $('.toggle-submenu').on('click', function() {
+    $('.toggle-submenu').on('click', function () {
         $(this).toggleClass('rotate');
         $(this).parents('.has-submenu').find('.submenu').toggle();
     });
@@ -168,9 +167,9 @@ $(document).ready(function() {
 
 
 
-$(function() {
+$(function () {
 
-    $(".circle-progress").each(function() {
+    $(".circle-progress").each(function () {
 
         var value = $(this).attr('data-value');
         var left = $(this).find('.progress-left .progress-bar');
@@ -196,7 +195,7 @@ $(function() {
 });
 
 //   Meeting Form Handler
-$(function() {
+$(function () {
     $('input[type=datetime-local]').prop('min', new Date().toJSON().slice(0, 19));
 
     var form = $("#meeting-form");
@@ -204,7 +203,9 @@ $(function() {
 
     }
     form.validate({
-        errorPlacement: function errorPlacement(error, element) { element.before(error); },
+        errorPlacement: function errorPlacement(error, element) {
+            element.before(error);
+        },
         rules: {
             confirm: {
                 equalTo: "#password"
@@ -226,19 +227,19 @@ $(function() {
             previous: "رجوع",
             loading: "تحميل ...",
         },
-        errorPlacement: function(error, element) {
+        errorPlacement: function (error, element) {
             error.appendTo(element.parent(".form-group"));
         },
         transitionEffect: "slideLeft",
-        onStepChanging: function(event, currentIndex, newIndex) {
+        onStepChanging: function (event, currentIndex, newIndex) {
             form.validate().settings.ignore = ":disabled,:hidden";
             return form.valid();
         },
-        onFinishing: function(event, currentIndex) {
+        onFinishing: function (event, currentIndex) {
             form.validate().settings.ignore = ":disabled";
             return form.valid();
         },
-        onFinished: function(event, currentIndex) {
+        onFinished: function (event, currentIndex) {
             $('#confirm-model').modal('show');
         }
     });
@@ -270,7 +271,7 @@ $(function() {
 
 var countable = 2;
 // Start Append test
-$('#btn-add-new-test').click(function() {
+$('#btn-add-new-test').click(function () {
 
     let _append = `
             <li id="row-${countable++}" class="d-flex mb-3">
@@ -285,12 +286,12 @@ $('#btn-add-new-test').click(function() {
 });
 
 // Start Get Row number to add in the modal
-$(document).on('click', '.question-modal-trigger', function() {
+$(document).on('click', '.question-modal-trigger', function () {
     $('#add-questions-modal').attr('data-row-id', $(this).parents('li').attr('id'))
 });
 var countableRows = 1;
 // trigger input to add questions
-$('#add-new-question').on('keyup', function(e) {
+$('#add-new-question').on('keyup', function (e) {
     if (e.keyCode == 13) {
 
         if ($(this).val().length == 0) {
@@ -313,6 +314,32 @@ $('#add-new-question').on('keyup', function(e) {
 })
 
 
-$('#add-questions-modal').on('hidden.bs.modal', function(e) {
+$('#add-questions-modal').on('hidden.bs.modal', function (e) {
     $('#questions-list').html('');
 })
+
+
+var maxLength = 300;
+$(".show-read-more").each(function () {
+    var myStr = $(this).text();
+    if ($.trim(myStr).length > maxLength) {
+        var newStr = myStr.substring(0, maxLength);
+        var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+        $(this).empty().html(newStr);
+        $(this).append(`<a href="javascript:void(0);" class="text-primary read-more d-flex align-items-center mt-2">
+        <span>عرض المزيد</span>  <i class="fas fa-chevron-down mr-1"></i> </a> `);
+        $(this).append('<span class="more-text">' + removedStr + '</span>');
+    }
+});
+$(document).on('click', '.read-more', function () {
+    $(this).siblings(".more-text").css('display', 'inline');
+    $(this).parent().append(`<a href="javascript:void(0);" class="text-primary hide-more d-flex align-items-center mt-2">
+        <span>اخفاء</span>  <i class="fas fa-chevron-up mr-1"></i> </a> `);
+    $(this).remove();
+});
+$(document).on('click', '.hide-more', function () {
+    $(this).siblings(".more-text").css('display', 'none');
+    $(this).parent().append(`<a href="javascript:void(0);" class="text-primary read-more d-flex align-items-center mt-2">
+        <span>عرض المزيد</span>  <i class="fas fa-chevron-down mr-1"></i> </a> `);
+    $(this).remove();
+});
