@@ -866,6 +866,11 @@ div.h4 {
   color: #1FB943;
 }
 
+.certificates-box img {
+  max-width: 74px;
+  max-height: 74px;
+}
+
 .public-leading-businesses-section .lb-widget {
   padding-bottom: 5px;
   position: relative;
