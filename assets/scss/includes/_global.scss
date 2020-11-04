@@ -538,3 +538,19 @@ div.h4 {
     }
 
 }
+
+.container-quizzes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500;
+    background: $main-color;
+    padding: 10px;
+    border-radius: 10px;
+}
+#quiz1 {
+    width: 100%;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 3px;
+}
