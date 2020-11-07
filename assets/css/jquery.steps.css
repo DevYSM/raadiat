@@ -155,7 +155,7 @@
 }
 
 .wizard>.content>.body ul {
-    list-style: disc !important;
+    /* list-style: disc !important; */
 }
 
 .wizard>.content>.body ul>li {
