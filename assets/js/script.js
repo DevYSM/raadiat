@@ -343,3 +343,45 @@ $(document).on('click', '.hide-more', function () {
         <span>عرض المزيد</span>  <i class="fas fa-chevron-down mr-1"></i> </a> `);
     $(this).remove();
 });
+
+
+// Quizzes 
+$("#quiz1").dlxQuiz({
+    quizData: {
+        questions: [
+            {
+                q:'ما هي خطة العمل المتفق عليها                ',
+                a: "All div elements",
+                options: [
+                    "الأزياء",
+                    "المجوهرات",
+                    "التصميم الداخلي"
+                ]
+            },
+            {
+                q: "Which of the following is correct",
+                a: "jQuery is a JavaScript Library",
+                options: [
+                    "jQuery is a JSON Library",
+                    "jQuery is a JavaScript Library"
+                ]
+            },
+            {
+                q: "jQuery uses CSS selectors to select elements?",
+                a: "True",
+                options: ["True", "False"]
+            },
+            {
+                q: "Which sign does jQuery use as a shortcut for jQuery?",
+                a: "the $ sign",
+                options: ["the % sign", "the $ sign", "the ? Sign"]
+            },
+            {
+                q:
+                    "Is jQuery a library for client scripting or server scripting?",
+                a: "Client scripting",
+                options: ["Client scripting", "Server scripting"]
+            }
+        ]
+    }
+});

@@ -1,0 +1,238 @@
+.quiz button,
+.quiz .quizQuestions ul.questionAnswers li,
+.quiz .quizResults li {
+  border-radius: 2px;
+}
+
+
+/*  PLUGIN DEFAULT STYLES    */
+
+.quiz {
+  /* font-family: "Open Sans", Arial, sans-serif; */
+  position: relative;
+  max-width: 800px;
+}
+
+.quiz ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quiz .hidden {
+  display: none;
+}
+
+.quiz button {
+  font: inherit;
+  font-size: 14px;
+  border: none;
+  background: #4789FB;
+  color: #FFF;
+  cursor: pointer;
+  margin-bottom: 5px;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .quiz button {
+    width: auto;
+  }
+}
+
+.quiz button:hover {
+  background: #3e77da;
+}
+
+.quiz .quizQuestions {
+  margin-bottom: 10px;
+}
+
+.quiz .quizQuestions > li {
+  display: none;
+  position: relative;
+}
+
+.quiz .quizQuestions > li.showQuestion {
+  display: block;
+}
+
+.quiz .quizQuestions > li.disabled .questionAnswers li:hover:not(.selectedAnswer) {
+  background: initial;
+}
+
+.quiz .quizQuestions > li.disabled .questionAnswers li label,
+.quiz .quizQuestions > li.disabled .questionAnswers li input[type="radio"] {
+  cursor: default;
+}
+
+.quiz .quizQuestions > li .questionCount {
+  font-size: 14px;
+}
+
+.quiz .quizQuestions > li .questionTitle {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.quiz .quizQuestions ul.questionAnswers {
+  overflow: hidden;
+}
+
+.quiz .quizQuestions ul.questionAnswers li {
+  margin-top: 5px;
+  border: 1px solid #1dbdb7;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.quiz .quizQuestions ul.questionAnswers li:first-child {
+  margin: 0;
+}
+
+.quiz .quizQuestions ul.questionAnswers li:hover {
+  background: #E8F8F7;
+}
+
+.quiz .quizQuestions ul.questionAnswers li.selectedAnswer {
+  background: #1dbdb7;
+  color: #FFF;
+}
+
+.quiz .quizQuestions ul.questionAnswers li.incorrectAnswer {
+  background: #F02D3A;
+  color: #FFF;
+}
+
+.quiz .quizQuestions ul.questionAnswers li.correctAnswer {
+  background: #1dbdb7;
+  color: #FFF;
+}
+
+.quiz .quizQuestions ul.questionAnswers label,
+.quiz .quizQuestions ul.questionAnswers input[type="radio"] {
+  cursor: pointer;
+}
+
+.quiz .quizQuestions ul.questionAnswers input[type="radio"] {
+  margin: 0;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.quiz .quizQuestions ul.questionAnswers label {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+.quiz .quizControls {
+  margin-top: 10px;
+}
+
+.quiz .quizControls button {
+  display: block;
+}
+
+@media screen and (min-width: 640px) {
+  .quiz .quizControls button {
+    display: initial;
+    margin-right: 5px;
+  }
+}
+
+.quiz .quizControls button.ctrlPrev {
+  background: #6c757d;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+
+}
+
+.quiz .quizControls button.ctrlPrev:hover {
+  background: #1dbdb7;
+}
+
+.quiz .quizControls button.ctrlDone {
+  display: none;
+}
+
+.quiz .quizControls button.ctrlNext,
+.quiz .quizControls button.ctrlDone {
+  float: right;
+  background: #1dbdb7;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.quiz .quizControls button.ctrlNext:hover,
+.quiz .quizControls button.ctrlDone:hover {
+  background: #6c757d;
+}
+
+.quiz .quizControls button.ctrlSkip {
+  background: #9b59b6;
+}
+
+.quiz .quizControls button.ctrlSkip:hover {
+  background: #874d9e;
+}
+
+.quiz .quizControls button.disabled {
+  cursor: not-allowed;
+  background: #E2E2E2;
+}
+
+.quiz .quizControls button.disabled:hover {
+  background: #E2E2E2;
+}
+
+.quiz .quizResults ul {
+  margin: 20px 0 10px;
+}
+
+.quiz .quizResults li {
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid;
+  border-left: 10px solid;
+  margin-bottom: 10px;
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 640px) {
+  .quiz .quizResults li {
+    padding-left: 20px;
+  }
+}
+
+.quiz .quizResults .viewResults {
+  background: #1dbdb7;
+}
+
+.quiz .quizResults .viewResults:hover {
+  background: #26aa5e;
+}
+
+.quiz .quizResults .questionTitle {
+  margin: 5px 0 10px;
+}
+
+.quiz .quizResults .answeredCorrect {
+  border-color: #1dbdb7;
+}
+
+.quiz .quizResults .answeredWrong {
+  border-color: #F02D3A;
+}
+
+
+/*# sourceMappingURL=main.css.map */

@@ -538,6 +538,23 @@ div.h4 {
 .accordion .card .card-header button.collapsed i {
   transform: rotate(180deg);
 }
+.container-quizzes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500;
+  background: #1DBDB7;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#quiz1 {
+  width: 100%;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 3px;
+}
+
 .navbar {
   background: #FFF;
 }
