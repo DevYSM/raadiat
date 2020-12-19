@@ -1210,6 +1210,50 @@ div.h4 {
   margin: 0 5px;
 }
 
+.incubator-subscription-process .process-box {
+  border-width: 8px !important;
+  z-index: 2;
+  position: relative;
+  margin-top: 37px;
+}
+.incubator-subscription-process .process-box.success-process::before {
+  background-image: url(/assets/images/icons/sm-success.png);
+}
+.incubator-subscription-process .process-box.pending-process::before {
+  background-image: url(/assets/images/icons/empty-proccess.png);
+}
+.incubator-subscription-process .process-box::before {
+  content: "";
+  position: absolute;
+  right: 81px;
+  top: -15px;
+  height: 25px;
+  width: 25px;
+  z-index: 2;
+  background-repeat: no-repeat;
+}
+.incubator-subscription-process .process-box::after {
+  content: "";
+  position: absolute;
+  right: 93.5px;
+  top: -45px;
+  height: 37px;
+  width: 1px;
+  background: #a4a4a4;
+  z-index: 1;
+  opacity: 0.5;
+}
+.incubator-subscription-process .process-box .badge {
+  padding: 8px;
+}
+.incubator-subscription-process .process-box .badge.badge-success {
+  color: #34bb4b;
+  background-color: #e8f8ec;
+}
+.incubator-subscription-process .process-box hr {
+  opacity: 0.4;
+}
+
 .footer {
   background: #535353;
   margin-top: 60px;
